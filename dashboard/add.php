@@ -389,35 +389,6 @@ $stdata = $nss->select($sql);
                       </div>
 
 
-                      <!-- Second Data Box-->
-<!-- <script type="text/javascript">
-$(document).ready(function(){
-$('#addToTable').click(function(){
-  var addData = {
-    institution: $('#nos').val(),
-    start_d: $('#sch_start').val(),
-    end_d: $('#sch_end').val(),
-    type: $('#type').val();,
-    qualification: $('#qualification').val()
-  }
-
-  $('#datatable-editable1').DataTable( {
-       data: addData,
-       columns: [
-           { title: "Name of institution" },
-           { title: "Start Date" },
-           { title: "End Date" },
-           { title: "Education Type" },
-           { title: "Qualification" }
-       ]
-   } );
-
-
-});
-
-});
-</script> -->
-
 
 
 

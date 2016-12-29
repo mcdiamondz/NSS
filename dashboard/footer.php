@@ -72,11 +72,12 @@
 <!--Form Validation-->
 <script src="assets/plugins/bootstrapvalidator/dist/js/bootstrapValidator.js" type="text/javascript"></script>
 
-<!-- Custome script -->
+<!-- Custom script -->
 <script src="assets/pages/zcustome.js" type="text/javascript"></script>
 <script src="assets/js/addrecords.js" type="text/javascript"></script>
 <script src="assets/js/displayrecords.js" type="text/javascript"></script>
 <script src="assets/js/delete_rec.js" type="text/javascript"></script>
+<script src="assets/js/company.js" type="text/javascript"></script>
 <script type="text/javascript">
 function delete_rec(){
   row_id = $('#hidden_row_id').val();
@@ -98,34 +99,40 @@ function delete_rec(){
     });
 }
 </script>
+
 <script type="text/javascript">
 $(document).ready(function(){
+
   $('#dateofbirth').datepicker({
     format: 'yyyy/mm/dd',
     autoclose: true,
     todayHighlight: true
   });
-  $('#sch_start_date').datepicker({
-    format: 'yyyy/mm/dd',
-    autoclose: true,
-    todayHighlight: true
-  });
-  $('#sch_end_date').datepicker({
-    format: 'yyyy/mm/dd',
-    autoclose: true,
-    todayHighlight: true
-  });
-  $('#job_start_date').datepicker({
-    format: 'yyyy/mm/dd',
-    autoclose: true,
-    todayHighlight: true
-  });
-  $('#job_end_date').datepicker({
+
+    $('#sch_start_date').datepicker({
     format: 'yyyy/mm/dd',
     autoclose: true,
     todayHighlight: true
   });
 
+  $('#sch_end_date').datepicker({
+    format: 'yyyy/mm/dd',
+    autoclose: true,
+    todayHighlight: true
+  });
+
+  $('#job_start_date').datepicker({
+    format: 'yyyy/mm/dd',
+    autoclose: true,
+    todayHighlight: true
+  });
+
+  $('#job_end_date').datepicker({
+    format: 'yyyy/mm/dd',
+    autoclose: true,
+    todayHighlight: true
+  });
+  
 });
 </script>
 

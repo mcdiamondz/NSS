@@ -2,13 +2,7 @@
 <?php
 include 'dbconfig/dbInit.php';
 
-function test_input($data){
-  $data = trim($data);
-  $data = strip_tags($data);
-  $data = htmlspecialchars($data);
-  $data = stripslashes($data);
-  return $data;
-}
+
 
                             if(isset($_GET['email']) && !empty($_GET['email']) AND isset($_GET['hash']) && !empty($_GET['hash'])){
 

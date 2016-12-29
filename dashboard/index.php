@@ -1,9 +1,8 @@
 <?php
 include 'header.php';
-
-
 include '../include/selectuserdata.php';
 include '../include/selectusereducation.php';
+include '../include/selectuseremp.php';
 ?>
 
 
@@ -165,8 +164,12 @@ include '../include/selectusereducation.php';
                               <tbody>
                                 <?php
                                   if($edudata){
-                                    foreach($data as $value){
-
+                                    foreach($edudata as $value){
+                                      $educationtype = $value['EducationType'];
+                                      $qualiobtained = $value['QualificationObtained'];
+                                      $institution = $value['Institution'];
+                                      $statedate = $value['StartDate'];
+                                      $enddate = $value['EndDate'];
                                         echo "<tr>";
                                         echo    "<td>$institution</td>";
                                         echo    "<td>$statedate</td>";
@@ -187,15 +190,29 @@ include '../include/selectusereducation.php';
                               <table class="table table-striped" id="datatable-editable1">
                                 <thead>
                                     <tr>
-                                        <th>Name Of Institue</th>
+                                        <th>Name Of Employer</th>
                                         <th>Start Date</th>
                                         <th>End Date</th>
-                                        <th>Qualification Obtained</th>
-                                        <th>Education Type</th>
+                                        <th>Position</th>
                                     </tr>
                                 </thead>
                                 <tbody>
-
+                                  <?php
+                                    if($empdata){
+                                      foreach($empdata as $value){
+                                        $employer = $value['Employer'];
+                                        $position = $value['Position'];
+                                        $stdate = $value['StartDate'];
+                                        $endate = $value['EndDate'];
+                                          echo "<tr>";
+                                          echo    "<td>$employer</td>";
+                                          echo    "<td>$stdate</td>";
+                                          echo    "<td>$endate</td>";
+                                          echo    "<td>$position</td>";
+                                          echo "</tr>";
+                                        }
+                                      }
+                                  ?>
                                 </tbody>
                               </table>
                             </div>
@@ -206,13 +223,6 @@ include '../include/selectusereducation.php';
                           </div>
 
                         </div>
-
-
-
-
-
-
-
 
 
 
