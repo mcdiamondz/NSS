@@ -30,7 +30,7 @@
 		<link href="assets/plugins/bootstrap-colorpicker/css/bootstrap-colorpicker.min.css" rel="stylesheet">
 		<link href="assets/plugins/bootstrap-datepicker/css/bootstrap-datepicker.min.css" rel="stylesheet">
 		<link href="assets/plugins/clockpicker/css/bootstrap-clockpicker.min.css" rel="stylesheet">
-		
+
 
         <!-- X-editable css -->
         <link type="text/css" href="assets/plugins/x-editable/css/bootstrap-editable.css" rel="stylesheet">
@@ -53,7 +53,7 @@
             }
         </style>
         <script type="text/javascript">
-            var uid = "<?php echo json_encode($_SESSION['userid']); ?>";
+            var uid = <?php echo json_encode($_SESSION['userid']); ?>;
         </script>
 
         <script src="assets/js/modernizr.min.js"></script>
