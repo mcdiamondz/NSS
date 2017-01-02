@@ -1,4 +1,4 @@
-<?php include 'includes/header.php';?>
+<?php include 'include/header.php';?>
 
 			<div class="header_mobile">
 				<div class="content_wrap">
@@ -146,4 +146,4 @@
 
 			<!-- /.footer_wrap -->
 			<!-- /.footer_wrap -->
-			<?php include 'includes/footer.php';?>
+			<?php include 'include/footer.php';?>

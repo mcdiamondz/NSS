@@ -7,8 +7,8 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="A fully featured admin theme which can be used to build CRM, CMS, etc.">
-        <meta name="author" content="Coderthemes">
+        <meta name="description" content="Nigerian Identity Management Solution">
+        <meta name="author" content="NSSS">
         <!-- App Favicon icon -->
         <link rel="shortcut icon" href="assets/images/favicon.html">
         <!-- App Title -->
@@ -30,7 +30,7 @@
 		<link href="assets/plugins/bootstrap-colorpicker/css/bootstrap-colorpicker.min.css" rel="stylesheet">
 		<link href="assets/plugins/bootstrap-datepicker/css/bootstrap-datepicker.min.css" rel="stylesheet">
 		<link href="assets/plugins/clockpicker/css/bootstrap-clockpicker.min.css" rel="stylesheet">
-		<link href="assets/plugins/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet">
+
 
         <!-- X-editable css -->
         <link type="text/css" href="assets/plugins/x-editable/css/bootstrap-editable.css" rel="stylesheet">
@@ -53,7 +53,7 @@
             }
         </style>
         <script type="text/javascript">
-            var uid = "<?php echo json_encode($_SESSION['userid']); ?>";
+            var uid = <?php echo json_encode($_SESSION['userid']); ?>;
         </script>
 
         <script src="assets/js/modernizr.min.js"></script>

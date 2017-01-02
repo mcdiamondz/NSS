@@ -15,7 +15,7 @@
 </div>
 <!-- /.body_wrap -->
 <a href="#" class="scroll_to_top icon-up" title="Scroll to top"></a>
-<div class="custom_html_section"></div>\
+<div class="custom_html_section"></div>
 <script>
 var resizefunc = [];
 </script>

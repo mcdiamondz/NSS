@@ -3,7 +3,7 @@
     <div class="container">
         <div class="row">
             <div class="col-xs-6">
-                © NSSS 2016. All rights reserved.
+                © NSSS <?php echo date('Y'); ?>. All rights reserved.
             </div>
             <div class="col-xs-6">
                 <ul class="pull-right list-inline m-b-0">
@@ -72,11 +72,13 @@
 <!--Form Validation-->
 <script src="assets/plugins/bootstrapvalidator/dist/js/bootstrapValidator.js" type="text/javascript"></script>
 
-<!-- Custome script -->
-<script src="assets/pages/zcustome.js" type="text/javascript"></script>
+<!-- Custom script -->
+<!-- <script src="assets/pages/zcustome.js" type="text/javascript"></script> -->
 <script src="assets/js/addrecords.js" type="text/javascript"></script>
-<script src="assets/js/displayrecords.js" type="text/javascript"></script>
+<!-- <script src="assets/js/displayrecords.js" type="text/javascript"></script> -->
 <script src="assets/js/delete_rec.js" type="text/javascript"></script>
+<script src="assets/js/company.js" type="text/javascript"></script>
+<script src="assets/js/filename.js" type="text/javascript"></script>
 <script type="text/javascript">
 function delete_rec(){
   row_id = $('#hidden_row_id').val();
@@ -98,28 +100,34 @@ function delete_rec(){
     });
 }
 </script>
+
 <script type="text/javascript">
 $(document).ready(function(){
+
   $('#dateofbirth').datepicker({
     format: 'yyyy/mm/dd',
     autoclose: true,
     todayHighlight: true
   });
-  $('#sch_start_date').datepicker({
+
+    $('#sch_start_date').datepicker({
     format: 'yyyy/mm/dd',
     autoclose: true,
     todayHighlight: true
   });
+
   $('#sch_end_date').datepicker({
     format: 'yyyy/mm/dd',
     autoclose: true,
     todayHighlight: true
   });
+
   $('#job_start_date').datepicker({
     format: 'yyyy/mm/dd',
     autoclose: true,
     todayHighlight: true
   });
+
   $('#job_end_date').datepicker({
     format: 'yyyy/mm/dd',
     autoclose: true,

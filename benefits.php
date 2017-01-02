@@ -1,4 +1,4 @@
-
+<?php include 'include/header.php'; ?>
 
 			<div class="header_mobile">
 				<div class="content_wrap">

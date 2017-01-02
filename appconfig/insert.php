@@ -9,13 +9,6 @@
               # code...
 
 
-                        function test_input($data){
-                          $data = trim($data);
-                          $data = strip_tags($data);
-                          $data = htmlspecialchars($data);
-                          $data = stripslashes($data);
-                          return $data;
-                        }
 
                         if ($_SERVER["REQUEST_METHOD"] == "POST") {
                             /* Field Validating using PHP*/
