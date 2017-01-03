@@ -1,11 +1,9 @@
 <?php include 'include/header.php'; ?>
-
-
 			<div class="header_mobile">
 				<div class="content_wrap">
 					<div class="menu_button icon-menu"></div>
 					<div class="logo">
-						<a href="index-2.html"><img src="images/logo-header.png" class="logo_main" alt="" width="246" height="52"></a>
+						<a href="index.php"><img src="images/logo-header.png" class="logo_main" alt="" width="246" height="52"></a>
 					</div>
 				</div>
 				<div class="side_wrap">
@@ -13,26 +11,26 @@
 					<div class="panel_top">
 						<nav class="menu_main_nav_area">
 							<ul id="menu_mobile" class="menu_main_nav">
-								<li class="menu-item  current-menu-item current-menu-ancestor current-menu-parent menu-item-has-children"><a href="index.html"><span>Home</span></a>
+								<li class="menu-item  current-menu-item current-menu-ancestor current-menu-parent menu-item-has-children"><a href="index.php"><span>Home</span></a>
 
 								</li>
 								<li class="menu-item menu-item-has-children"><a href="#"><span>About NSS</span></a>
 									<ul class="sub-menu">
-										<li class="menu-item"><a href="overview.html"><span>Overview</span></a></li>
-										<li class="menu-item"><a href="benefits.html"><span>Benefits</span></a></li>
+										<li class="menu-item"><a href="overview.php"><span>Overview</span></a></li>
+										<li class="menu-item"><a href="benefits.php"><span>Benefits</span></a></li>
 
 									</ul>
 								</li>
 
 								<li class="menu-item menu-item-has-children"><a href="#"><span>Enrollment</span></a>
 									<ul class="sub-menu">
-										<li class="menu-item"><a href="requirement.html"><span>Requirement</span></a></li>
-										<li class="menu-item"><a href="enroll.php"><span>Get Enrolled</span></a></li>
-										<li class="menu-item"><a href="eligibility.html"><span>Eligibility</span></a></li>
+										<li class="menu-item"><a href="requirement.php"><span>Requirement</span></a></li>
+										<li class="menu-item"><a href="getenrolled.php"><span>Get Enrolled</span></a></li>
+										<li class="menu-item"><a href="eligibility.php"><span>Eligibility</span></a></li>
 									</ul>
 								</li>
 
-								<li class="menu-item "><a href="contacts.html"><span>Contacts</span></a></li>
+								<li class="menu-item "><a href="contacts.php"><span>Contacts</span></a></li>
 							</ul>
 						</nav>
 					</div>
@@ -67,7 +65,7 @@
 				<div class="top_panel_title_inner top_panel_inner_style_1  title_present_inner breadcrumbs_present_inner">
 					<div class="content_wrap">
 						<h1 class="page_title">Overview</h1>
-						<div class="breadcrumbs"><a class="breadcrumbs_item home" href="index.html">Home</a><span class="breadcrumbs_delimiter"></span><span class="breadcrumbs_item current">About NSS</span></div>
+						<div class="breadcrumbs"><a class="breadcrumbs_item home" href="index.php">Home</a><span class="breadcrumbs_delimiter"></span><span class="breadcrumbs_item current">About NSS</span></div>
 					</div>
 				</div>
 			</div>
@@ -136,7 +134,7 @@
 																	<div id="sc_services_119273682_1" class="sc_services_item sc_services_item_1 odd first">
 
 																		<div class="sc_services_item_content">
-																			<h4 class="sc_services_item_title"><a href="post.html">My Social Security</a></h4>
+																			<h4 class="sc_services_item_title"><a href="post.php">My Social Security</a></h4>
 																			<div class="sc_services_item_description">
 																				<p>Check out your Social Security Statement, change your address & manage your benefits.
 </p>
@@ -148,7 +146,7 @@
 																	<div id="sc_services_119273682_2" class="sc_services_item sc_services_item_2 even">
 
 																		<div class="sc_services_item_content">
-																			<h4 class="sc_services_item_title"><a href="post.html">Online Services</a></h4>
+																			<h4 class="sc_services_item_title"><a href="post.php">Online Services</a></h4>
 																			<div class="sc_services_item_description">
 																				<p>Whether you are applying for or receiving benefits, learn what you can do online.</p>
 																			</div>
@@ -159,7 +157,7 @@
 																	<div id="sc_services_119273682_3" class="sc_services_item sc_services_item_3 odd">
 
 																		<div class="sc_services_item_content">
-																			<h4 class="sc_services_item_title"><a href="post.html">FAQs</a></h4>
+																			<h4 class="sc_services_item_title"><a href="post.php">FAQs</a></h4>
 																			<div class="sc_services_item_description">
 																				<p>Get answers to frequently asked questions about Social Security and its Benefit</p>
 																			</div>
@@ -170,7 +168,7 @@
 																	<div id="sc_services_119273682_4" class="sc_services_item sc_services_item_4 even">
 
 																		<div class="sc_services_item_content">
-																			<h4 class="sc_services_item_title"><a href="post.html">Promoting Business</a></h4>
+																			<h4 class="sc_services_item_title"><a href="post.php">Promoting Business</a></h4>
 																			<div class="sc_services_item_description">
 																				<p>Our company offers the most efficient and the greenest options for Promoting your Business.</p>
 																			</div>

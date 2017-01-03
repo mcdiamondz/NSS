@@ -1,11 +1,9 @@
 <?php include 'include/header.php'; ?>
-
-
 			<div class="header_mobile">
 				<div class="content_wrap">
 					<div class="menu_button icon-menu"></div>
 					<div class="logo">
-						<a href="index-2.html"><img src="images/logo-header.png" class="logo_main" alt="" width="246" height="52"></a>
+						<a href="index.php"><img src="images/logo-header.png" class="logo_main" alt="" width="246" height="52"></a>
 					</div>
 				</div>
 				<div class="side_wrap">
@@ -13,26 +11,26 @@
 					<div class="panel_top">
 						<nav class="menu_main_nav_area">
 							<ul id="menu_mobile" class="menu_main_nav">
-								<li class="menu-item  current-menu-item current-menu-ancestor current-menu-parent menu-item-has-children"><a href="index.html"><span>Home</span></a>
+								<li class="menu-item  current-menu-item current-menu-ancestor current-menu-parent menu-item-has-children"><a href="index.php"><span>Home</span></a>
 
 								</li>
 								<li class="menu-item menu-item-has-children"><a href="#"><span>About NSS</span></a>
 									<ul class="sub-menu">
-										<li class="menu-item"><a href="overview.html"><span>Overview</span></a></li>
-										<li class="menu-item"><a href="benefits.html"><span>Benefits</span></a></li>
+										<li class="menu-item"><a href="overview.php"><span>Overview</span></a></li>
+										<li class="menu-item"><a href="benefits.php"><span>Benefits</span></a></li>
 
 									</ul>
 								</li>
 
 								<li class="menu-item menu-item-has-children"><a href="#"><span>Enrollment</span></a>
 									<ul class="sub-menu">
-										<li class="menu-item"><a href="requirement.html"><span>Requirement</span></a></li>
-										<li class="menu-item"><a href="enroll.php"><span>Get Enrolled</span></a></li>
-										<li class="menu-item"><a href="eligibility.html"><span>Eligibility</span></a></li>
+										<li class="menu-item"><a href="requirement.php"><span>Requirement</span></a></li>
+										<li class="menu-item"><a href="getenrolled.php"><span>Get Enrolled</span></a></li>
+										<li class="menu-item"><a href="eligibility.php"><span>Eligibility</span></a></li>
 									</ul>
 								</li>
 
-								<li class="menu-item "><a href="contacts.html"><span>Contacts</span></a></li>
+								<li class="menu-item "><a href="contacts.php"><span>Contacts</span></a></li>
 							</ul>
 						</nav>
 					</div>
@@ -142,6 +140,4 @@
 			<!-- </.page_content_wrap> -->
 			<!-- </.page_content_wrap> -->
 
-			<!-- /.footer_wrap -->
-			<!-- /.footer_wrap -->
-		<?php include 'include/footer.php' ?>
+<?php include 'include/footer.php'; ?>
