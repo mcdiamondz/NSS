@@ -2,23 +2,22 @@
 require '../dbconfig/dbInit.php';
 
 
-$corpid = test_input($_POST['cid']);
-$logo = test_input($_POST['logo']);
-$orgname = test_input($_POST['company_name']);
-$address = test_input($_POST['company_address']);
-$state = test_input($_POST['state_of_location']);
-$lga = test_input($_POST['lga_of_location']);
-$rcnumber = test_input($_POST['company_RC_NO']);
-$biztype = test_input($_POST['business_type']);
-$yrofest = test_input($_POST['date_of_establishment']);
-$contperson = test_input($_POST['company_contact_person']);
-$contpersonphone = test_input($_POST['company_contact_phone']);
-$contpersonemail = test_input($_POST['company_contact_email']);
-$email = test_input($_POST['company_email']);
-$website = test_input($_POST['website']);
-$logo = test_input($_POST['logo']);
-$tinum = test_input($_POST['company_TIN']);
-$phone = test_input($_POST['company_phone']);
+$corpid = isset($_POST['cid'])?test_input($_POST['cid']):'';
+$orgname = isset($_POST['company_name'])?test_input($_POST['company_name']):'';
+$address = isset($_POST['company_address'])?test_input($_POST['company_address']):'';
+$state = isset($_POST['state_of_location'])?test_input($_POST['state_of_location']):'';
+$lga = isset($_POST['lga_of_location'])?test_input($_POST['lga_of_location']):'';
+$rcnumber = isset($_POST['company_RC_NO'])?test_input($_POST['company_RC_NO']):'';
+$biztype = isset($_POST['business_type'])?test_input($_POST['business_type']):'';
+$yrofest = isset($_POST['date_of_establishment'])?test_input($_POST['date_of_establishment']):'';
+$contperson = isset($_POST['company_contact_person'])?test_input($_POST['company_contact_person']):'';
+$contpersonphone = isset($_POST['company_contact_phone'])?test_input($_POST['company_contact_phone']):'';
+$contpersonemail = isset($_POST['company_contact_email'])?test_input($_POST['company_contact_email']):'';
+$email = isset($_POST['company_email'])?test_input($_POST['company_email']):'';
+$website = isset($_POST['website'])?test_input($_POST['website']):'';
+$logo = isset($_POST['logo'])?test_input($_POST['logo']):'';
+$tinum = isset($_POST['company_TIN'])?test_input($_POST['company_TIN']):'';
+$phone = isset($_POST['company_phone'])?test_input($_POST['company_phone']):'';
 
 
 if(isset($_POST['logo'])){

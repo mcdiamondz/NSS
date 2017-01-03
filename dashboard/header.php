@@ -53,7 +53,7 @@
             }
         </style>
         <script type="text/javascript">
-            var uid = <?php echo json_encode($_SESSION['userid']); ?>;
+            var uid = '<?php echo json_encode($_SESSION['userid']); ?>';
         </script>
 
         <script src="assets/js/modernizr.min.js"></script>
