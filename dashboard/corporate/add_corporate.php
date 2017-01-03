@@ -155,7 +155,7 @@ $stdata = $nss->select($sql);
                                       </div>
 
                                     </section>
-                                    <h3>Records</h3>
+                                    <h3>Projects</h3>
                                     <section>
                                       <div class="row">
                                         <div class="form-group clearfix">
@@ -219,7 +219,7 @@ $stdata = $nss->select($sql);
                                                   </div>
                                               </div>
 
-                                              <div id="emp_table">
+                                              <div id="project_list">
                                                   <table class="table table-striped" id="datatable-editable1">
                                                     <thead>
                                                         <tr>
@@ -229,7 +229,7 @@ $stdata = $nss->select($sql);
                                                             <th>Remarks</th>
                                                         </tr>
                                                     </thead>
-                                                    <tbody id="eduresult">
+                                                    <tbody id="projectadded">
 
                                                     </tbody>
                                                   </table>

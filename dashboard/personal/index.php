@@ -1,8 +1,8 @@
 <?php
 include 'header.php';
-include '../include/selectuserdata.php';
-include '../include/selectusereducation.php';
-include '../include/selectuseremp.php';
+include '../../include/selectuserdata.php';
+include '../../include/selectusereducation.php';
+include '../../include/selectuseremp.php';
 ?>
 
 
