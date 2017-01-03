@@ -1,6 +1,6 @@
 <?php
   session_start();
-  include '../dbconfig/dbInit.php';
+  include '../../dbconfig/dbInit.php';
  ?>
 <!DOCTYPE html>
 <html>
@@ -10,30 +10,30 @@
         <meta name="description" content="Nigerian Identity Management Solution">
         <meta name="author" content="NSSS">
         <!-- App Favicon icon -->
-        <link rel="shortcut icon" href="assets/images/favicon.html">
+        <link rel="shortcut icon" href="../assets/images/favicon.html">
         <!-- App Title -->
         <title>Nigerian Social Security Scheme</title>
         <!--Form Wizard-->
-        <link rel="stylesheet" type="text/css" href="assets/plugins/jquery.steps/css/jquery.steps.css" />
+        <link rel="stylesheet" type="text/css" href="../assets/plugins/jquery.steps/css/jquery.steps.css" />
 
-        <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
-        <link href="assets/css/core.css" rel="stylesheet" type="text/css" />
-        <link href="assets/css/components.css" rel="stylesheet" type="text/css" />
-        <link href="assets/css/icons.css" rel="stylesheet" type="text/css" />
-        <link href="assets/css/pages.css" rel="stylesheet" type="text/css" />
-        <link href="assets/css/menu.css" rel="stylesheet" type="text/css" />
-        <link href="assets/css/responsive.css" rel="stylesheet" type="text/css" />
+        <link href="../assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+        <link href="../assets/css/core.css" rel="stylesheet" type="text/css" />
+        <link href="../assets/css/components.css" rel="stylesheet" type="text/css" />
+        <link href="../assets/css/icons.css" rel="stylesheet" type="text/css" />
+        <link href="../assets/css/pages.css" rel="stylesheet" type="text/css" />
+        <link href="../assets/css/menu.css" rel="stylesheet" type="text/css" />
+        <link href="../assets/css/responsive.css" rel="stylesheet" type="text/css" />
 
         <!-- Pickers -->
         <!-- Plugins css -->
-    <link href="assets/plugins/timepicker/bootstrap-timepicker.min.css" rel="stylesheet">
-		<link href="assets/plugins/bootstrap-colorpicker/css/bootstrap-colorpicker.min.css" rel="stylesheet">
-		<link href="assets/plugins/bootstrap-datepicker/css/bootstrap-datepicker.min.css" rel="stylesheet">
-		<link href="assets/plugins/clockpicker/css/bootstrap-clockpicker.min.css" rel="stylesheet">
+    <link href="../assets/plugins/timepicker/bootstrap-timepicker.min.css" rel="stylesheet">
+		<link href="../assets/plugins/bootstrap-colorpicker/css/bootstrap-colorpicker.min.css" rel="stylesheet">
+		<link href="../assets/plugins/bootstrap-datepicker/css/bootstrap-datepicker.min.css" rel="stylesheet">
+		<link href="../assets/plugins/clockpicker/css/bootstrap-clockpicker.min.css" rel="stylesheet">
 
 
         <!-- X-editable css -->
-        <link type="text/css" href="assets/plugins/x-editable/css/bootstrap-editable.css" rel="stylesheet">
+        <link type="text/css" href="../assets/plugins/x-editable/css/bootstrap-editable.css" rel="stylesheet">
 
         <!-- HTML5 Shiv and Respond.js IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -53,10 +53,10 @@
             }
         </style>
         <script type="text/javascript">
-            var uid = <?php echo json_encode($_SESSION['userid']); ?>;
+            var uid = '<?php echo json_encode($_SESSION['userid']); ?>';
         </script>
 
-        <script src="assets/js/modernizr.min.js"></script>
+        <script src="../assets/js/modernizr.min.js"></script>
 		<script>
           (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
           (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

@@ -2,22 +2,23 @@
 require '../dbconfig/dbInit.php';
 
 
-$userid = test_input($_POST['uid']);
-$firstname = test_input($_POST['fname']);
-$lastname = test_input($_POST['lname']);
-$midname = test_input($_POST['mname']);
-$email = test_input($_POST['email']);
-$address = test_input($_POST['address']);
-$nexofkin = test_input($_POST['nok']);
-$gender = test_input($_POST['gender']);
-$dob = test_input($_POST['dob']);
-$phone = test_input($_POST['phone']);
-$marital_status = test_input($_POST['marital_status']);
-$statoforigin = test_input($_POST['state_of_origin']);
-$lgaoforigin = test_input($_POST['LGA_of_origin']);
-$statofresidence = test_input($_POST['state_of_residence']);
-$lgaofresidence = test_input($_POST['LGA_of_residence']);
-$permanentaddress = test_input($_POST['permaddress']);
+
+ $userid = isset($_POST['uid'])?test_input($_POST['uid']):'';
+ $firstname = isset($_POST['fname'])?test_input($_POST['fname']):'';
+ $lastname = isset($_POST['lname'])?test_input($_POST['lname']):'';
+ $midname = isset($_POST['mname'])?test_input($_POST['mname']);
+ $email = isset($_POST['email'])?test_input($_POST['email']):'';
+ $address = isset($_POST['address'])?test_input($_POST['address']):'';
+ $nexofkin = isset($_POST['nok'])?test_input($_POST['nok']);'';
+ $gender = isset($_POST['gender'])?test_input($_POST['gender']):'';
+ $dob = isset($_POST['dob'])?test_input($_POST['dob']):'';
+ $phone = isset($_POST['phone'])?test_input($_POST['phone']):'';
+ $marital_status = isset($_POST['marital_status'])?test_input($_POST['marital_status']):'';
+ $statoforigin = isset($_POST['state_of_origin'])?test_input($_POST['state_of_origin']):'';
+ $lgaoforigin = isset($_POST['LGA_of_origin'])?test_input($_POST['LGA_of_origin']):'';
+ $statofresidence = isset($_POST['state_of_residence'])?test_input($_POST['state_of_residence']):'';
+ $lgaofresidence = isset($_POST['LGA_of_residence'])?test_input($_POST['LGA_of_residence']):'';
+ $permanentaddress = isset($_POST['permaddress'])?test_input($_POST['permaddress']):'';
 
 
 $sql = "INSERT INTO user_data (UserID, Firstname, Lastname, MiddleName, Gender, DateOfBirth, Email, PhoneNumber, MaritalStatus, ResidentialAddress, StateOfResidence, ResidentialLocalGovt, Address, StateOfOrigin, LocalGovt)

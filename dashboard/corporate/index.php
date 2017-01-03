@@ -34,9 +34,38 @@ include 'header.php';
                                 <h3 class="panel-title">Company Profile</h3>
                             </div>
                             <div class="panel-body">
-                                <p>
-                                    Company Details Here
-                                </p>
+                              <table>
+                                <tbody>
+                                  <tr>
+                                    <td><b>First Name:</strong></b></td>
+                                    <td> <?php echo $firstname; ?></td>
+                                  </tr>
+                                  <tr>
+                                    <td><b>Middle Name:</b></td>
+                                    <td> <?php echo $middlename; ?></td>
+                                  </tr>
+                                  <tr>
+                                    <td><b>Last Name:</b></td>
+                                    <td> <?php echo $lastname; ?></td>
+                                  </tr>
+                                  <tr>
+                                    <td><b>Gender:</b></td>
+                                    <td> <?php echo $gender; ?></td>
+                                  </tr>
+                                  <tr>
+                                    <td><b>Date Of Birth:</b></td>
+                                    <td> <?php echo $dob; ?></td>
+                                  </tr>
+                                  <tr>
+                                    <td><b>Email:</b></td>
+                                    <td> <?php echo $email; ?></td>
+                                  </tr>
+                                  <tr>
+                                    <td><b>Phone:</b></td>
+                                    <td> <?php echo $phone; ?></td>
+                                  </tr>
+                                </tbody>
+                              </table>
                             </div>
                         </div>
                     </div>

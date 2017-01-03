@@ -55,7 +55,6 @@
                   lga_of_location :  $('#displaylga').val(),
                   company_TIN : $('#company_TIN').val(),
                   company_email :  $('#company_email').val(),
-                  company_phone :  $('#company_phone').val(),
                   website :  $('#website').val(),
                   company_contact_person :  $('#company_contact_person').val(),
                   company_contact_phone : $('#company_contact_phone').val(),

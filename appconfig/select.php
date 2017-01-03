@@ -92,9 +92,7 @@
                                     $values = array(':email' => $email, ':passwd' => hash('sha512', $password));
                                     $data = $nss->select_query($sql, $values);
                                     if($data){
-                                              foreach ($data as $value) {
-                                                $_SESSION['userid'] = $value['UserID'];
-                                              }
+
 
                                                 //records user's last login date
                                                 $sql = "UPDATE login SET LastLogin = :logindate WHERE Email = :email";
@@ -106,7 +104,12 @@
                                                 foreach ($data as $value) {
                                                     $accesslevel = $value['AccessLevel'];
                                                     $_SESSION['user_email'] = $value['Email'];
-                                                    $_SESSION['userid'] = $value['UserID'];
+                                                    if($value['AccessLevel'] == 1){
+                                                        $_SESSION['userid'] = $value['UserID'];
+                                                    }
+                                                    elseif($value['AccessLevel'] == 2){
+                                                        $_SESSION['corpid'] = $value['UserID'];
+                                                    }
                                                 }
 
 
