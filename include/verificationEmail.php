@@ -43,7 +43,7 @@ $message = "<div role='document' autoid='_rp_D' class='_rp_e5'>  <div class='ite
 <p>Below is your login credentials,</p>
 <p>Email: $email</p>
 <p>Password: $password</p>
-<p><strong><a href='https://localhost/nsss/verify.php?email=$email&hash=$hash' target='_blank'>Activate my account</a></strong></p>
+<p><strong><a href='https://localhost/nss/verification.php?email=$email&hash=$hash' target='_blank'>Activate my account</a></strong></p>
 <p>Kind regards,<br>
 The NSS Team</p>
 </font></td>

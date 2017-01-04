@@ -1,6 +1,5 @@
 
 <?php
-include 'dbconfig/dbInit.php';
 
 
 
@@ -21,10 +20,7 @@ include 'dbconfig/dbInit.php';
                                     # code...
                                     // if($value['IsActive'] != 0 && $value['Hash'] == NULL)
                                     if($value['IsActive'] != 0){
-                                      echo "<div class='alert alert-danger alert-dismissible text-center'>
-                                              <button type='button' class='close' data-dismiss='alert' aria-hidden='true'>×</button>
-                                                <strong>Your account has already been activated. </strong>.
-                                            </div>";
+                                          echo '<h6 class="sc_services_subtitle sc_item_subtitle">Account Has already been verified. <a href="login.php">You can now to login</a></h6>';
                                     }
 
                                     elseif($value['IsActive'] == 0){
@@ -33,20 +29,17 @@ include 'dbconfig/dbInit.php';
                                         $data = $nss->update_query($sql, $values);
                                         if($data){
 
-                                            echo "<div class='alert alert-success alert-dismissible text-center'>
-                                                    <button type='button' class='close' data-dismiss='alert' aria-hidden='true'>×</button>
-                                                      <strong>Well done!</strong> Your account is now active, you can now login
-                                                  </div>";
+                                            echo '<h6 class="sc_services_subtitle sc_item_subtitle">Account Has been verified. <a href="login.php">You can now to login</a></h6>';
                                         }
                                     }
                                   }
                                 }
                                 else{
-                                      echo "<div class='alert alert-danger alert-dismissible text-center'>
-                                              <button type='button' class='close' data-dismiss='alert' aria-hidden='true'>x</button>
-                                                Verification failed, Please send a mail to customer support at support@sme4.me
-                                            </div>";
+                                      echo '<h6 class="sc_services_subtitle sc_item_subtitle">Account verification failed, Contact support</h6>';
                                 }
+                            }
+                            else {
+                                 echo '<h6 class="sc_services_subtitle sc_item_subtitle">You must be lost <a href="index.php">click here to find your way</a></h6>';
                             }
 
 

@@ -71,7 +71,12 @@
                                     $userid = rand(1, 9999999);
                                     $hash = hash('whirlpool', rand(1, 9999999));
                                     $isactive = 0;
-                                    $accesslevel = 0;
+                                    if($_POST['cat'] == 'individual'){
+                                      $accesslevel = 1;
+                                    }
+                                    elseif ($_POST['cat'] == 'corporate') {
+                                      $accesslevel = 2;
+                                    }
                                     // $datecreated;
 
                                     $chkMail = "SELECT Email FROM login WHERE Email = :email";
@@ -146,7 +151,7 @@
                                                   else{
                                                     echo  "<span>
                                                               <div class='alert alert-danger fade in'>
-                                                                  <button type='button' class='close' data-dismiss='alert'>x</button>
+
                                                                   Signup error, Contact NSS customer support for assistance
                                                               </div>
                                                           </span>";
@@ -156,7 +161,7 @@
                                         else{
                                             echo  "<span>
                                                       <div class='alert alert-danger fade in'>
-                                                          <button type='button' class='close' data-dismiss='alert'>x</button>
+
                                                           Sorry, email already exist
                                                       </div>
                                                   </span>";
@@ -165,8 +170,8 @@
                                 else{
 
                                   echo "<span>
-                                          <div class='alert alert-danger fade in col-sm-12'>                                            
-                                            <strong>Registration not Successful!</strong> You must agree to Terms and Conditions to continue.
+                                          <div class='alert alert-danger fade in col-sm-12'>
+                                            <strong>Registration not Successful!</strong> Terms and Conditions must be agreed to continue.
                                           </div>
                                         </span>";
                                 }

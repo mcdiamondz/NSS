@@ -64,7 +64,7 @@
 		  <div class="page_content_wrap page_paddings_yes">
 			  <div class="content_wrap">
                 <div class="content">
-                  <div class="itemscope post-33 page hentry" itemscope itemtype="http://schema.org/Article">
+                  <div class="itemscope post-33 page hentry" itemscope itemtype="">
                     <div class="post_content" itemprop="articleBody">
                       <div class="full-width">
                         <div class="column">
@@ -74,16 +74,17 @@
                               <div class="columns_wrap sc_columns columns_nofluid sc_columns_count_2">
                                 <div class="column-1_2 sc_column_item sc_column_item_1 odd first">
                                   <div class="wrapper-page">
+																		<?php include 'appconfig/select.php'; ?>
                                     <div class=" card-box">
                                       <div class="panel-heading">
                                         <h3 align="justify" class="text-center"> Sign In to <strong class="text-custom">NSS Portal</strong> </h3>
                                       </div>
                                       <div class="panel-body">
-                                        <form class="form-horizontal m-t-20" action="http://coderthemes.com/ubold_2.1/menu_2/index.php">
+                                        <form class="form-horizontal m-t-20" action="" method="post">
                                           <div class="form-group ">
                                             <div class="col-xs-12">
                                               <div align="justify">
-                                                <input name="text" type="text" class="form-control" required="" placeholder="Username">
+                                                <input name="email" type="text" class="form-control" required="" placeholder="Email">
                                                 </div>
                                             </div>
                                           </div>
@@ -109,8 +110,9 @@
                                           <div class="form-group text-center m-t-40">
                                             <div class="col-xs-12">
                                               <div align="justify">
-                                                <button class="btn btn-pink btn-block text-uppercase waves-effect waves-light" type="submit">Log In</button>
-                                              </div>
+                                                <button class="btn btn-pink btn-block text-uppercase waves-effect waves-light" name="signin" type="submit">Log In</button>
+																								<input type="hidden" name="formname" value="login" />
+																							</div>
                                             </div>
                                           </div>
                                           <div class="form-group m-t-30 m-b-0">

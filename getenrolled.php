@@ -84,7 +84,7 @@
 																																</div>
                                                                 <div class="style2 col-xs-4">
 																																	<label for="Individual">Individual</label>
-                                                                	<input name="cat" type="radio" id="Individual" value="individual" />
+                                                                	<input name="cat" checked type="radio" id="Individual" value="individual" />
 																																</div>
 																																<div class="style2 col-xs-4">
 																																	<label for="Corporate">Corporate</label>

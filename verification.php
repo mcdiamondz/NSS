@@ -64,7 +64,7 @@
 			<div class="top_panel_title top_panel_style_1  title_present breadcrumbs_present scheme_original">
 				<div class="top_panel_title_inner top_panel_inner_style_1  title_present_inner breadcrumbs_present_inner">
 					<div class="content_wrap">
-						<h1 class="page_title">Benefits</h1>
+						<h1 class="page_title">Verification</h1>
 						<div class="breadcrumbs"><a class="breadcrumbs_item home" href="index.php">Home</a><span class="breadcrumbs_delimiter"></span><span class="breadcrumbs_item current">About NSS</span></div>
 					</div>
 				</div>
@@ -75,7 +75,7 @@
 
 				<div class="content_wrap">
 					<div class="content">
-						<div class="itemscope post-29 page hentry" itemscope itemtype="http://schema.org/Article">
+						<div class="itemscope post-29 page hentry" itemscope itemtype="">
 							<div class="post_content" itemprop="articleBody">
 								<div class="full-width">
 									<div class="full-width">
@@ -85,7 +85,7 @@
 												<div class="h255"></div>
 												<div id="sc_services_1715964234_wrap" class="sc_services_wrap">
 												  <div id="sc_services_1715964234" class="sc_services sc_services_style_services-1 sc_services_type_images  margin_top_huge margin_bottom_huge aligncenter">
-														<h6 class="sc_services_subtitle sc_item_subtitle">Account Has been verified</h6>
+														<?php include 'include/verify.php'; ?>
 
 												        <div class="sc_slider_swiper swiper-slider-container sc_slider_nopagination sc_slider_controls sc_slider_controls_bottom" data-interval="7855" data-slides-per-view="3" data-slides-space="30" data-slides-min-width="250">
                                                           <div class="slides swiper-wrapper">

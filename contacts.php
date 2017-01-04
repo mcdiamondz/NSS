@@ -89,7 +89,7 @@
 
 				<div class="content_wrap">
 					<div class="content">
-						<div class="itemscope page hentry" itemscope itemtype="http://schema.org/Article">
+						<div class="itemscope page hentry" itemscope itemtype="">
 							<div class="post_content" itemprop="articleBody">
 
 								<div class="block_1473078833951 scheme_dark">
@@ -106,7 +106,7 @@
 																<p>
 																<div id="sc_form_224916523_wrap" class="sc_form_wrap">
 																	<div id="sc_form_224916523" class="sc_form sc_form_style_form_1 margin_top_medium">
-																		<form id="sc_form_224916523_form" class="sc_input_hover_iconed" data-formtype="form_1" method="post" action="http://airsupply-html.themerex.net/include/contact-form.php">
+																		<form id="sc_form_224916523_form" class="sc_input_hover_iconed" data-formtype="form_1" method="post" action="">
 																			<div class="sc_form_info">
 																				<div class="sc_form_item sc_form_field label_over"><input id="contact_form_username" type="text" name="username" aria-required="true"><label class="required" for="contact_form_username"><i class="sc_form_label_icon icon-user"></i><span class="sc_form_label_content" data-content="Name">Name</span></label></div>
 																				<div class="sc_form_item sc_form_field label_over"><input id="contact_form_email" type="email" name="email" aria-required="true"><label class="required" for="contact_form_email"><i class="sc_form_label_icon icon-mail-empty"></i><span class="sc_form_label_content" data-content="E-mail">E-mail</span></label></div>

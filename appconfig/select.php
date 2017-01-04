@@ -85,54 +85,70 @@
 
 
 
-
-
+//echo hash('sha512', $password);
+//echo ($email);
                                     $sql = "SELECT * FROM login
-                                            WHERE Email = :email AND Password = :passwd AND IsActive = 1";
+                                            WHERE Email = :email AND Password = :passwd";
                                     $values = array(':email' => $email, ':passwd' => hash('sha512', $password));
                                     $data = $nss->select_query($sql, $values);
                                     if($data){
 
+                                      foreach ($data as $value) {
+                                        # code...
+                                        $IsActive = $value['IsActive'];
+                                      }
 
-                                                //records user's last login date
-                                                $sql = "UPDATE login SET LastLogin = :logindate WHERE Email = :email";
-                                                $values = array(':logindate' => $date, ':email' => $email);
-                                                $nss->update_query($sql, $values);
+                                        if($IsActive == 0){
+                                          echo  "<span>
+                                                    <div class='alert alert-danger fade in'>
+                                                        Account has not been activated, please activate your account
+                                                    </div>
+                                                </span>";
+                                        }else{
 
-
-
-                                                foreach ($data as $value) {
-                                                    $accesslevel = $value['AccessLevel'];
-                                                    $_SESSION['user_email'] = $value['Email'];
-                                                    if($value['AccessLevel'] == 1){
-                                                        $_SESSION['userid'] = $value['UserID'];
-                                                    }
-                                                    elseif($value['AccessLevel'] == 2){
-                                                        $_SESSION['corpid'] = $value['UserID'];
-                                                    }
-                                                }
-
-
-
-                                                // if ($accesslevel == 0) {
-                                                //     $_SESSION['access'] = 0; //Users
-                                                // }elseif($accesslevel == 1) {
-                                                //     $_SESSION['access'] = 1; //Collation agents
-                                                // }elseif($accesslevel == 2) {
-                                                //     $_SESSION['access'] = 2; //admin
-                                                // }
+                                          //records user's last login date
+                                          $sql = "UPDATE login SET LastLogin = :logindate WHERE Email = :email";
+                                          $values = array(':logindate' => $date, ':email' => $email);
+                                          $nss->update_query($sql, $values);
 
 
 
+                                          foreach ($data as $value) {
+                                              $accesslevel = $value['AccessLevel'];
+                                              $_SESSION['user_email'] = $value['Email'];
+                                              if($value['AccessLevel'] == 1){
+                                                  $_SESSION['userid'] = $value['UserID'];
+                                              }
+                                              elseif($value['AccessLevel'] == 2){
+                                                  $_SESSION['corpid'] = $value['UserID'];
+                                              }
+                                          }
 
-                                                if($accesslevel == 1){
-                                                    $_SESSION['access_level'] = $accesslevel;
-                                                    header('Location: dashboard/personal/add.php');
-                                                }
-                                                elseif($accesslevel == 2){
-                                                  echo "<script>location.href='dashboard/personal/add.php'</script>";
-                                                    // header('Location: contacts.php');
-                                                }
+
+
+                                          // if ($accesslevel == 0) {
+                                          //     $_SESSION['access'] = 0; //Users
+                                          // }elseif($accesslevel == 1) {
+                                          //     $_SESSION['access'] = 1; //Collation agents
+                                          // }elseif($accesslevel == 2) {
+                                          //     $_SESSION['access'] = 2; //admin
+                                          // }
+
+
+
+
+                                          if($accesslevel == 1){
+                                              $_SESSION['access_level'] = $accesslevel;
+                                              header('Location: dashboard/personal/add.php');
+                                          }
+                                          elseif($accesslevel == 2){
+                                            echo "<script>location.href='dashboard/personal/add.php'</script>";
+                                              // header('Location: contacts.php');
+                                          }
+
+                                            }
+
+
 
                                   }
                                   else{
