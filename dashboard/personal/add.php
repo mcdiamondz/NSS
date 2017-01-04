@@ -1,4 +1,4 @@
-<?php include "header.php";
+<?php include "../header/header.php";
 
 $sql = "SELECT * FROM states ORDER BY name ASC";
 $stdata = $nss->select($sql);
@@ -18,7 +18,7 @@ $stdata = $nss->select($sql);
 
                         <hr>
                         <!-- Form Wizard-->
-                        <?php include '../appconfig/insert.php'; ?>
+
 
                         <!-- Wizard with Validation -->
 
@@ -391,4 +391,4 @@ $stdata = $nss->select($sql);
 
 <?php include 'footer.php'; ?>
 <!--Form Wizard Custom script -->
-<script src="assets/pages/zcustome.js" type="text/javascript"></script>
+<script src="../assets/pages/zcustome.js" type="text/javascript"></script>

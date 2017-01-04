@@ -1,4 +1,4 @@
-<?php
+<?php ob_start();
 include 'include/header.php';
 ?>
 
@@ -208,4 +208,6 @@ include 'include/header.php';
               </div>
 			  <!-- </.page_content_wrap> -->
 <!-- </.page_content_wrap> -->
-<?php include 'include/footer.php'; ?>
+<?php include 'include/footer.php';
+ob_end_flush();
+?>

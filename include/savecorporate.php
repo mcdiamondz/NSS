@@ -38,10 +38,17 @@ $values = array(':corpid' => $corpid, ':orgname' => $orgname,
                 );
 $data = $nss->insert_query($sql, $values);
 if($data){
+    //Save company contact person information
     $sql2 = "INSERT INTO corporate_contact_person (CorpID, Name, Phone,	Email) VALUES (:corpid, :name, :phone, :email)";
     $values2 = array(':corpid' => $corpid, ':name' => $contperson,
                      ':phone' => $contpersonphone, ':email' => $contpersonemail);
     $data2 = $nss->insert_query($sql2, $values2);
+
+    //Set datasubmitted field in login table to 1
+    $sql3 = "UPDATE login SET DataSubmitted = 1 WHERE UserID = :id";
+    $values3 = array(':id' => $corpid);
+    $nss->update_query($sql3, $values3);
+
   echo "<div class='alert alert-success  alert-dismissible text-center' style='width:800px; margin:0 auto;'>
           <button type='button' class='close' data-dismiss='alert' aria-hidden='true'>x</button>
             <strong>Well done!</strong> Your data is saved.

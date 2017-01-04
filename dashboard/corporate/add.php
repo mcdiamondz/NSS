@@ -18,7 +18,7 @@ $stdata = $nss->select($sql);
 
                         <hr>
                         <!-- Form Wizard-->
-                        <?php include '../appconfig/insert.php'; ?>
+                        <?php include '../../appconfig/insert.php'; ?>
 
                         <!-- Wizard with Validation -->
 
@@ -285,4 +285,4 @@ $stdata = $nss->select($sql);
                       </div>
 <?php include 'footer.php'; ?>
 <!--Form Wizard Custom script -->
-<script src="assets/pages/zzcustome.js" type="text/javascript"></script>
+<script src="../assets/pages/zzcustome.js" type="text/javascript"></script>

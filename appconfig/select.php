@@ -95,6 +95,7 @@
                                       foreach ($data as $value) {
                                         # code...
                                         $IsActive = $value['IsActive'];
+                                        $datasubmitted = $value['DataSubmitted'];
                                       }
 
                                         if($IsActive == 0){
@@ -116,6 +117,7 @@
                                           foreach ($data as $value) {
                                               $accesslevel = $value['AccessLevel'];
                                               $_SESSION['user_email'] = $value['Email'];
+                                              $name = $value['']
                                               if($value['AccessLevel'] == 1){
                                                   $_SESSION['userid'] = $value['UserID'];
                                               }
@@ -138,11 +140,12 @@
 
 
                                           if($accesslevel == 1){
+                                            if()
                                               $_SESSION['access_level'] = $accesslevel;
                                               header('Location: dashboard/personal/add.php');
                                           }
                                           elseif($accesslevel == 2){
-                                            echo "<script>location.href='dashboard/personal/add.php'</script>";
+                                              header('Location: dashboard/corporate/add.php');
                                               // header('Location: contacts.php');
                                           }
 

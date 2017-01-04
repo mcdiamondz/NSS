@@ -77,7 +77,7 @@
                                     elseif ($_POST['cat'] == 'corporate') {
                                       $accesslevel = 2;
                                     }
-                                    // $datecreated;
+                                    $datasub = 0;
 
                                     $chkMail = "SELECT Email FROM login WHERE Email = :email";
                                     $chkMailVal = array(':email' => $email);
@@ -85,14 +85,15 @@
                                     if(!$chkData){
 
                                               if($email && $password){
-                                                  $sql = "INSERT INTO login (UserID, Email, Password, Hash, IsActive, DateCreated, AccessLevel)
-                                                          VALUES(:userid, :email, :password, :hash, :isactive, DATE(NOW()), :access)";
+                                                  $sql = "INSERT INTO login (UserID, Email, Password, Hash, IsActive, DateCreated, AccessLevel, DataSubmitted)
+                                                          VALUES(:userid, :email, :password, :hash, :isactive, DATE(NOW()), :access, :submitted)";
                                                   $values = array('userid' => $userid,
                                                                   ':email' => $email,
                                                                   ':password' => hash('sha512', $password),
                                                                   ':isactive' => $isactive,
                                                                   ':hash' => $hash,
-                                                                  ':access' => $accesslevel);
+                                                                  ':access' => $accesslevel
+                                                                  ':submitted' => $datasub);
 
                                                   $data = $nss->insert_query($sql, $values);
 
