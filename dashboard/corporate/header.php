@@ -204,7 +204,7 @@
 
 
                                     <li class="divider"></li>
-                                    <li><a href="../logout.php"><i class="ti-power-off text-danger m-r-10"></i> Logout</a></li>
+                                    <li><a href="../../logout.php"><i class="ti-power-off text-danger m-r-10"></i> Logout</a></li>
                                 </ul>
                             </li>
                         </ul>

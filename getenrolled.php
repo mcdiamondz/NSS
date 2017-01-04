@@ -3,30 +3,30 @@
 				<div class="content_wrap">
 					<div class="menu_button icon-menu"></div>
 					<div class="logo">
-						<a href="index-2.html"><img src="images/logo-header.png" class="logo_main" alt="" width="246" height="52"></a>					</div>
+						<a href="index.php"><img src="images/logo-header.png" class="logo_main" alt="" width="246" height="52"></a>					</div>
 				</div>
 				<div class="side_wrap">
 					<div class="close">Close</div>
 					<div class="panel_top">
 						<nav class="menu_main_nav_area">
 							<ul id="menu_mobile" class="menu_main_nav">
-								<li class="menu-item  current-menu-item current-menu-ancestor current-menu-parent menu-item-has-children"><a href="index.html"><span>Home</span></a>								</li>
+								<li class="menu-item  current-menu-item current-menu-ancestor current-menu-parent menu-item-has-children"><a href="index.php"><span>Home</span></a>								</li>
 								<li class="menu-item menu-item-has-children"><a href="#"><span>About NSS</span></a>
 									<ul class="sub-menu">
-										<li class="menu-item"><a href="overview.html"><span>Overview</span></a></li>
-										<li class="menu-item"><a href="benefits.html"><span>Benefits</span></a></li>
+										<li class="menu-item"><a href="overview.php"><span>Overview</span></a></li>
+										<li class="menu-item"><a href="benefits.php"><span>Benefits</span></a></li>
 									</ul>
 								</li>
 
 								<li class="menu-item menu-item-has-children"><a href="#"><span>Enrollment</span></a>
 									<ul class="sub-menu">
-										<li class="menu-item"><a href="requirement.html"><span>Requirement</span></a></li>
-										<li class="menu-item"><a href="enroll.php"><span>Get Enrolled</span></a></li>
-										<li class="menu-item"><a href="eligibility.html"><span>Eligibility</span></a></li>
+										<li class="menu-item"><a href="requirement.php"><span>Requirement</span></a></li>
+										<li class="menu-item"><a href="getenrolled.php"><span>Get Enrolled</span></a></li>
+										<li class="menu-item"><a href="eligibility.php"><span>Eligibility</span></a></li>
 									</ul>
 								</li>
 
-								<li class="menu-item "><a href="contacts.html"><span>Contacts</span></a></li>
+								<li class="menu-item "><a href="contacts.php"><span>Contacts</span></a></li>
 							</ul>
 						</nav>
 					</div>
@@ -61,7 +61,7 @@
 
 				<div class="content_wrap">
 					<div class="content">
-						<div class="itemscope post-33 page hentry" itemscope itemtype="">
+						<div class="itemscope post-33 page hentry" itemscope itemtype="http://schema.org/Article">
 							<div class="post_content" itemprop="articleBody">
 								<div class="full-width">
 									<div class="column">
@@ -70,17 +70,30 @@
 												<div class="h40"></div>
 												<div class="columns_wrap sc_columns columns_nofluid sc_columns_count_2">
 													<div class="column-1_2 sc_column_item sc_column_item_1 odd first">
-													  <div class="wrapper-page"><?php include 'appconfig/insert.php'; ?>
+													  <div class="wrapper-page">
+													  <?php include 'appconfig/insert.php'; ?>
                                                         <div class=" card-box">
-
                                                           <div class="panel-heading">
                                                             <h3 class="text-center"> Sign Up to <strong class="text-custom">NSS</strong> </h3>
                                                           </div>
                                                           <div class="panel-body">
                                                             <form class="form-horizontal m-t-20" action="" method="post">
+																															<div class="form-group">
+                                                                <div class="style2 col-xs-3">
+
+																																</div>
+                                                                <div class="style2 col-xs-4">
+																																	<label for="Individual">Individual</label>
+                                                                	<input name="cat" type="radio" id="Individual" value="individual" />
+																																</div>
+																																<div class="style2 col-xs-4">
+																																	<label for="Corporate">Corporate</label>
+															  																	<input name="cat" type="radio" id="Corporate" value="corporate" />
+																																</div>
+                                                              </div>
                                                               <div class="form-group ">
                                                                 <div class="col-xs-12">
-                                                                  <input name="email" type="email" class="form-control" value="<?php echo isset($_POST['email'])?$_POST['email']:''; ?>" required placeholder="Email" autocomplete="off">
+                                                                  <input name="email" type="email" class="email form-control" value="<?php echo isset($_POST['email'])?$_POST['email']:''; ?>" placeholder="Email" autocomplete="off" required>
                                                                 </div>
                                                               </div>
                                                               <div class="form-group ">
@@ -103,9 +116,9 @@
                                                               </div>
                                                               <div class="form-group text-center m-t-40">
                                                                 <div class="col-xs-12">
-                                                                  <button class="btn btn-pink btn-block text-uppercase waves-effect waves-light" name="register" type="submit"> Register </button>
+																																	<button class="btn btn-pink btn-block text-uppercase waves-effect waves-light" name="register" type="submit"> Register </button>
 																																	<input type="hidden" name="formname" value="signup" />
-																																</div>
+                                                                </div>
                                                               </div>
                                                               <div class="form-group m-t-20 m-b-0"></div>
                                                               <div class="form-group m-b-0 text-center"></div>
@@ -125,48 +138,42 @@
 																<div class="sc_section_content_wrap">
 																	<div id="sc_call_to_action_1852270381" class="sc_call_to_action sc_call_to_action_style_1 sc_call_to_action_align_center" >
 																		<div class="sc_call_to_action_info">
-																			<h6 class="sc_call_to_action_subtitle sc_item_subtitle">Requirements</h6>
+																			<h6 class="sc_call_to_action_subtitle sc_item_subtitle">Terms &amp; Condition</h6>
 																			<div class="sc_call_to_action_descr sc_item_descr">
 																			  <div>
                                                                                 <div>
-                                                                                  <div>
+																																								</div>
                                                                                     <div>
-                                                                                      <div align="left"><strong>You must be able to verify some information about yourself and:</strong>
+
+																		  <div align="left">
+																		  <div align="justify"><span class="style1">Welcome to Nigeria Social Security Scheme. <br>
+																				      The use of this website/application is subject to the following terms and conditions. Please read carefully before using the website. Your success to and use of the service is conditioned on your acceptance of the compliance with these terms:</span>
                                                                                         <ul>
-                                                                                          <li>Have a valid E-mail address,</li>
-                                                                                          <li>Have a Nigeria. mailing address, and </li>
-                                                                                          <li>Be at least 18 years of age.</li>
-                                                                                        </ul>
-                                                                                      </div>
-                                                                                    </div>
+	<p>
+                                                                                        <li>
+     <div align="justify">You will only access NSSS site/ application by becoming a registered member and creating an account with us. You agree to be responsible for maintaining the confidentiality of your password and all activities that occur under your account.</div>
+   </li>
+<li>
+  <div>You will not provide any false personal information on NSSS page.</div>
+</li>
+<li>
+  <div>You will not create an account for anyone other than yourself without permission.</div>
+</li>
+<li>
+  <div>You will not create more than one personal account</div>
+</li>
+<li>
+  <div>We reserve the right at our sole discretion to modify or replace these terms at any time. If a revision is material, we will try to at least provide 7days notice prior to any new terms taking effect.</div>
+</li>
+</p>
+<div>
+ <div align="justify"><strong>If you have any question about these terms and conditions, please contact us.</strong></div>
+                                                                                   <div>                                                                                    </div>
                                                                                   </div>
-                                                                                  <div>
-                                                                                    <div>
-                                                                                      <p align="left">You can only create an account using your own personal information and for your own exclusive use. </p>
-                                                                                      <p align="left">You   cannot create an account on behalf of another person or using another   person's information or identity, even if you have that person's written   permission. </p>
-                                                                                      <div align="left">Unauthorized use of this service may subject you to criminal or civil penalties, or both. </div>
-                                                                                    </div>
-                                                                                  </div>
-                                                                                </div>
-																		      </div>
-																			</div>
-																		</div>
-																	</div>
-																	<div class="h15"></div>
+                                                                                <div class="h15"></div>
 																	<figure class="sc_image  sc_image_shape_square"><img src="images/team_img4.png" alt="" /></figure>
-																</div>
-															</div>
-														</div>
-													</div>
-												</div>
 												<div class="h30"></div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="related_wrap related_wrap_empty"></div>
+											    <div class="related_wrap related_wrap_empty"></div>
 					</div>
 					<!-- </div> class="content"> -->
 				</div>
@@ -174,4 +181,5 @@
 			</div>
 			<!-- </.page_content_wrap> -->
 <!-- </.page_content_wrap> -->
+
 <?php include 'include/footer.php'; ?>

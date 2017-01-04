@@ -1,34 +1,32 @@
 <?php include 'include/header.php'; ?>
-
-
 			<div class="header_mobile">
 				<div class="content_wrap">
 					<div class="menu_button icon-menu"></div>
 					<div class="logo">
-						<a href="index-2.html"><img src="images/logo-header.png" class="logo_main" alt="" width="246" height="52"></a>					</div>
+						<a href="index.php"><img src="images/logo-header.png" class="logo_main" alt="" width="246" height="52"></a>					</div>
 				</div>
 				<div class="side_wrap">
 					<div class="close">Close</div>
 					<div class="panel_top">
 						<nav class="menu_main_nav_area">
 							<ul id="menu_mobile" class="menu_main_nav">
-								<li class="menu-item  current-menu-item current-menu-ancestor current-menu-parent menu-item-has-children"><a href="index.html"><span>Home</span></a>								</li>
+								<li class="menu-item  current-menu-item current-menu-ancestor current-menu-parent menu-item-has-children"><a href="index.php"><span>Home</span></a>								</li>
 								<li class="menu-item menu-item-has-children"><a href="#"><span>About NSS</span></a>
 									<ul class="sub-menu">
-										<li class="menu-item"><a href="overview.html"><span>Overview</span></a></li>
-										<li class="menu-item"><a href="benefits.html"><span>Benefits</span></a></li>
+										<li class="menu-item"><a href="overview.php"><span>Overview</span></a></li>
+										<li class="menu-item"><a href="benefits.php"><span>Benefits</span></a></li>
 									</ul>
 								</li>
 
 								<li class="menu-item menu-item-has-children"><a href="#"><span>Enrollment</span></a>
 									<ul class="sub-menu">
-										<li class="menu-item"><a href="requirement.html"><span>Requirement</span></a></li>
-										<li class="menu-item"><a href="enroll.php"><span>Get Enrolled</span></a></li>
-										<li class="menu-item"><a href="eligibility.html"><span>Eligibility</span></a></li>
+										<li class="menu-item"><a href="requirement.php"><span>Requirement</span></a></li>
+										<li class="menu-item"><a href="getenrolled.php"><span>Get Enrolled</span></a></li>
+										<li class="menu-item"><a href="eligibility.php"><span>Eligibility</span></a></li>
 									</ul>
 								</li>
 
-								<li class="menu-item "><a href="contacts.html"><span>Contacts</span></a></li>
+								<li class="menu-item "><a href="contacts.php"><span>Contacts</span></a></li>
 							</ul>
 						</nav>
 					</div>
@@ -66,7 +64,7 @@
 		  <div class="page_content_wrap page_paddings_yes">
 			  <div class="content_wrap">
                 <div class="content">
-                  <div class="itemscope post-33 page hentry" itemscope itemtype="#">
+                  <div class="itemscope post-33 page hentry" itemscope itemtype="http://schema.org/Article">
                     <div class="post_content" itemprop="articleBody">
                       <div class="full-width">
                         <div class="column">
@@ -78,15 +76,14 @@
                                   <div class="wrapper-page">
                                     <div class=" card-box">
                                       <div class="panel-heading">
-                                        <h3 align="justify" class="text-center"><strong class="text-custom">NSS Portal</strong> </h3>
+                                        <h3 align="justify" class="text-center"> Sign In to <strong class="text-custom">NSS Portal</strong> </h3>
                                       </div>
                                       <div class="panel-body">
-																				<?php include 'appconfig/select.php';?>
-                                        <form class="form-horizontal m-t-20" action="" method="post">
+                                        <form class="form-horizontal m-t-20" action="http://coderthemes.com/ubold_2.1/menu_2/index.php">
                                           <div class="form-group ">
                                             <div class="col-xs-12">
                                               <div align="justify">
-                                                <input type="text" name="email" value="<?php echo isset($_POST['email'])?$_POST['email']:''; ?>" class="form-control" required="" placeholder="Email" autocomplete="off">
+                                                <input name="text" type="text" class="form-control" required="" placeholder="Username">
                                                 </div>
                                             </div>
                                           </div>
@@ -112,14 +109,13 @@
                                           <div class="form-group text-center m-t-40">
                                             <div class="col-xs-12">
                                               <div align="justify">
-                                                <button class="btn btn-pink btn-block text-uppercase waves-effect waves-light" name="signin" type="submit" value="login">Log In</button>
-																								<input type="hidden" name="formname" value="login" />
-																							</div>
+                                                <button class="btn btn-pink btn-block text-uppercase waves-effect waves-light" type="submit">Log In</button>
+                                              </div>
                                             </div>
                                           </div>
                                           <div class="form-group m-t-30 m-b-0">
                                             <div class="col-sm-12">
-                                              <div align="justify"><a href="page-recoverpw.html" class="text-dark"><i class="fa fa-lock m-r-5"></i> Forgot your password?</a> </div>
+                                              <div align="justify"><a href="page-recoverpw.php" class="text-dark"><i class="fa fa-lock m-r-5"></i> Forgot your password?</a> </div>
                                             </div>
                                           </div>
                                         </form>
@@ -127,7 +123,7 @@
                                     </div>
                                     <div class="row">
                                       <div class="col-sm-12 text-center">
-                                        <p align="justify">Don't have an account? <a href="enroll.php" class="text-primary m-l-5"><b>Sign Up</b></a></p>
+                                        <p align="justify">Don't have an account? <a href="getenrolled.php" class="text-primary m-l-5"><b>Sign Up</b></a></p>
                                       </div>
                                     </div>
                                   </div>
@@ -207,5 +203,4 @@
               </div>
 			  <!-- </.page_content_wrap> -->
 <!-- </.page_content_wrap> -->
-
 <?php include 'include/footer.php'; ?>

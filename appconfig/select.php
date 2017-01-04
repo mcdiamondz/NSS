@@ -114,23 +114,23 @@
 
 
 
-                                                if ($accesslevel == 0) {
-                                                    $_SESSION['access'] = 0; //Users
-                                                }elseif($accesslevel == 1)  {
-                                                    $_SESSION['access'] = 1; //Collation agents
-                                                }elseif($accesslevel == 2)  {
-                                                    $_SESSION['access'] = 2; //admin
-                                                }
+                                                // if ($accesslevel == 0) {
+                                                //     $_SESSION['access'] = 0; //Users
+                                                // }elseif($accesslevel == 1) {
+                                                //     $_SESSION['access'] = 1; //Collation agents
+                                                // }elseif($accesslevel == 2) {
+                                                //     $_SESSION['access'] = 2; //admin
+                                                // }
 
 
 
 
-                                                if($accesslevel == 2){
+                                                if($accesslevel == 1){
                                                     $_SESSION['access_level'] = $accesslevel;
-                                                    header('Location: contacts.php');
+                                                    header('Location: dashboard/personal/add.php');
                                                 }
-                                                elseif($accesslevel == 0){
-                                                  echo "<script>location.href='dashboard/add.php'</script>";
+                                                elseif($accesslevel == 2){
+                                                  echo "<script>location.href='dashboard/personal/add.php'</script>";
                                                     // header('Location: contacts.php');
                                                 }
 

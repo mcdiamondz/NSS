@@ -9,7 +9,6 @@
               # code...
 
 
-
                         if ($_SERVER["REQUEST_METHOD"] == "POST") {
                             /* Field Validating using PHP*/
                                 // check for valid name of either uppercase and lowercase only
@@ -73,7 +72,7 @@
                                     $hash = hash('whirlpool', rand(1, 9999999));
                                     $isactive = 0;
                                     $accesslevel = 0;
-                                    $datecreated;
+                                    // $datecreated;
 
                                     $chkMail = "SELECT Email FROM login WHERE Email = :email";
                                     $chkMailVal = array(':email' => $email);
@@ -164,9 +163,9 @@
                                         }
                                 }
                                 else{
-                                  echo "<span>
-                                          <div class='alert alert-danger fade in col-sm-12'>
 
+                                  echo "<span>
+                                          <div class='alert alert-danger fade in col-sm-12'>                                            
                                             <strong>Registration not Successful!</strong> You must agree to Terms and Conditions to continue.
                                           </div>
                                         </span>";

@@ -1,4 +1,70 @@
-<?php include 'include/header.php'; ?>
+<?php include 'dbconfig/dbInit.php';
+session_start();
+?>
+<!DOCTYPE html>
+<html lang="en-US" class="scheme_original">
+<head>
+	<title>NSS Official :: Website</title>
+	<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<meta name="format-detection" content="telephone=no">
+	
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="NSS Official Website :: Official.">
+	<meta name="author" content="Avesera/Styloring">
+	
+	    <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+        <link href="assets/css/core.css" rel="stylesheet" type="text/css" />
+        <link href="assets/css/components.css" rel="stylesheet" type="text/css" />
+        <link href="assets/css/icons.css" rel="stylesheet" type="text/css" />
+        <link href="assets/css/pages.css" rel="stylesheet" type="text/css" />
+        <link href="assets/css/responsive.css" rel="stylesheet" type="text/css" />
+        <link rel="stylesheet" href="assets/plugins/dist/css/bootstrapValidator.css"/>
+        <!-- HTML5 Shiv and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+        <![endif]-->
+
+        <script src="assets/js/modernizr.min.js"></script>
+        <script type="text/javascript" src="assets/plugins/dist/js/bootstrapValidator.js"></script>
+        <script>
+          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          })(window,document,'script','../../../www.google-analytics.com/analytics.js','ga');
+
+          ga('create', 'UA-69506598-1', 'auto');
+          ga('send', 'pageview');
+        </script>
+	
+	<link rel='shortcut icon' href='favicon.png' type='image/x-icon' />
+	<link rel='dns-prefetch' href='http://use.fontawesome.com/' />
+	<link rel='dns-prefetch' href='http://fonts.googleapis.com/' />
+	<link property="stylesheet" rel='stylesheet' id='essential-grid-plugin-settings-css' href='js/vendor/plugins/essential-grid/public/assets/css/settings.css' type='text/css' media='all' />
+	<link href="https://fonts.googleapis.com/css?family=Abril+Fatface%7CDroid+Serif:400,700%7COpen+Sans:300,400,600,700,800%7CRaleway:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+	<link property="stylesheet" rel='stylesheet' id='rs-plugin-settings-css' href='js/vendor/plugins/revslider/public/assets/css/settings.css' type='text/css' media='all' />
+	<link property="stylesheet" rel='stylesheet' id='airsupply-font-encode_sans-style-css' href='css/font-face/encode_sans/stylesheet.css' type='text/css' media='all' />
+	<link property="stylesheet" rel='stylesheet' id='airsupply-fontello-style-css' href='css/fontello/css/fontello.css' type='text/css' media='all' />
+	<link property="stylesheet" rel='stylesheet' id='airsupply-main-style-css' href='css/style.css' type='text/css' media='all' />
+	<link property="stylesheet" rel='stylesheet' id='global' href='css/global.css' type='text/css' media='all' />
+	<link property="stylesheet" rel='stylesheet' id='airsupply-animation-style-css' href='js/vendor/fw/css/core.animation.css' type='text/css' media='all' />
+	<link property="stylesheet" rel='stylesheet' id='airsupply-shortcodes-style-css' href='js/vendor/shortcodes/theme.shortcodes.css' type='text/css' media='all' />
+	<link property="stylesheet" rel='stylesheet' id='airsupply-responsive-style-css' href='css/responsive.css' type='text/css' media='all' />
+	<link property="stylesheet" rel='stylesheet' id='airsupply-swiperslider-style-css' href='js/vendor/fw/js/swiper/swiper.css' type='text/css' media='all' />
+    <style type="text/css">
+<!--
+.style1 {
+	color: #003366;
+	font-weight: bold;
+}
+.style2 {color: #000033}
+.style3 {color: #990000}
+-->
+    </style>
+</head>
 <body class="body_filled blog airsupply_body layout_excerpt template_excerpt scheme_original top_panel_show top_panel_above sidebar_show sidebar_right sidebar_outer_hide">
 	<a id="toc_home" class="sc_anchor" title="Home" data-description="&lt;i&gt;Return to Home&lt;/i&gt; - &lt;br&gt;navigate to home page of the site" data-icon="icon-home" data-separator="yes"></a>
 	<a id="toc_top" class="sc_anchor" title="To Top" data-description="&lt;i&gt;Back to top&lt;/i&gt; - &lt;br&gt;scroll to top of the page" data-icon="icon-double-up" data-url="" data-separator="yes"></a>
@@ -12,21 +78,21 @@
 							<div class="columns_wrap columns_fluid no_margins">
 								<div class="column-1_3 contact_logo">
 									<div class="logo">
-										<a href="index-2.html"><img src="images/logo-header.png" class="logo_main" alt="" width="246" height="52"></a>
+										<a href="index.php"><img src="images/logo-header.png" class="logo_main" alt="" width="246" height="52"></a>
 									</div>
 								</div>
 								<div class="contact_information column-2_3">
 									<div class="columns_wrap columns_fluid no_margins">
 										<div class="contact_field contact_phone column-1_3">
-
+											
 											<span class="contact_label contact_phone">Call Us Today</span>
 											<span class="contact_email">09036267513</span>										</div>
 										<div class="contact_field open_hours column-1_3">
-
+											
 											<span class="contact_label open_hours_label">Work Time</span>
 											<span class="open_hours_time">7am-8pm</span>										</div>
 										<div class="contact_field contact_address column-1_3">
-
+											
 											<span class="contact_label contact_address_1">NSS TOWERS</span>
 											<span class="contact_address_2">NIGERIA</span>	</div>
 									</div>
@@ -39,26 +105,26 @@
 						<div class="content_wrap clearfix">
 							<nav class="menu_main_nav_area menu_hover_fade">
 								<ul id="menu_main" class="menu_main_nav">
-									<li class="menu-item"><a href="index.html"><span>Home</span></a></li>
+									<li class="menu-item"><a href="index.php"><span>Home</span></a></li>
 									<li class="menu-item menu-item-has-children"><a href="#"><span>About NSS</span></a>
 										<ul class="sub-menu">
-											<li class="menu-item"><a href="overview.html"><span>Overview</span></a></li>
-											<li class="menu-item"><a href="benefits.html"><span>Benefits</span></a></li>
+											<li class="menu-item"><a href="overview.php"><span>Overview</span></a></li>
+											<li class="menu-item"><a href="benefits.php"><span>Benefits</span></a></li>
 										</ul>
 									</li>
-
+									
 									<li class="menu-item menu-item-has-children"><a href="#"><span>Enrollment</span></a>
 										<ul class="sub-menu">
-											<li class="menu-item"><a href="requirement.html"><span>Requirements</span></a></li>
-											<li class="menu-item"><a href="enroll.php"><span>Get Enrolled</span></a></li>
-											<li class="menu-item current-menu-item current-menu-ancestor current-menu-parent menu-item-has-children"><a href="eligibility.html"><span>Eligibility</span></a></li>
+											<li class="menu-item"><a href="requirement.php"><span>Requirements</span></a></li>
+											<li class="menu-item"><a href="getenrolled.php"><span>Get Enrolled</span></a></li>
+											<li class="menu-item current-menu-item current-menu-ancestor current-menu-parent menu-item-has-children"><a href="eligibility.php"><span>Eligibility</span></a></li>
 										</ul>
 									</li>
-
-									<li class="menu-item"><a href="contacts.html"><span>Contact Us</span></a></li>
+									
+									<li class="menu-item"><a href="contacts.php"><span>Contact Us</span></a></li>
 								</ul>
 							</nav>
-							<a href="enroll.php" class="make_appoinment_button sc_button sc_button_square sc_button_style_filled sc_button_size_small sc_button_style_color_style2">Get Enrolled</a>
+							<a href="getenrolled.php" class="make_appoinment_button sc_button sc_button_square sc_button_style_filled sc_button_size_small sc_button_style_color_style2">Sign in</a>	&nbsp;&nbsp;&nbsp;<a href="getenrolled.php" class="make_appoinment_button sc_button sc_button_square sc_button_style_filled sc_button_size_small sc_button_style_color_style2">Get Enrolled</a>
 
 						</div>
 					</div>
@@ -70,7 +136,7 @@
 				<div class="content_wrap">
 					<div class="menu_button icon-menu"></div>
 					<div class="logo">
-						<a href="index-2.html"><img src="images/logo-header.png" class="logo_main" alt="" width="246" height="52"></a>
+						<a href="index.php"><img src="images/logo-header.png" class="logo_main" alt="" width="246" height="52"></a>
 					</div>
 				</div>
 				<div class="side_wrap">
@@ -78,26 +144,26 @@
 					<div class="panel_top">
 						<nav class="menu_main_nav_area">
 							<ul id="menu_mobile" class="menu_main_nav">
-								<li class="menu-item  current-menu-item current-menu-ancestor current-menu-parent menu-item-has-children"><a href="index.html"><span>Home</span></a>
-
+								<li class="menu-item  current-menu-item current-menu-ancestor current-menu-parent menu-item-has-children"><a href="index.php"><span>Home</span></a>
+									
 								</li>
 								<li class="menu-item menu-item-has-children"><a href="#"><span>About NSS</span></a>
 									<ul class="sub-menu">
-										<li class="menu-item"><a href="overview.html"><span>Overview</span></a></li>
-										<li class="menu-item"><a href="benefits.html"><span>Benefits</span></a></li>
-
+										<li class="menu-item"><a href="overview.php"><span>Overview</span></a></li>
+										<li class="menu-item"><a href="benefits.php"><span>Benefits</span></a></li>
+										
 									</ul>
 								</li>
-
+								
 								<li class="menu-item menu-item-has-children"><a href="#"><span>Enrollment</span></a>
 									<ul class="sub-menu">
-										<li class="menu-item"><a href="requirement.html"><span>Requirement</span></a></li>
-										<li class="menu-item"><a href="enroll.php"><span>Get Enrolled</span></a></li>
-										<li class="menu-item"><a href="eligibility.html"><span>Eligibility</span></a></li>
+										<li class="menu-item"><a href="requirement.php"><span>Requirement</span></a></li>
+										<li class="menu-item"><a href="getenrolled.php"><span>Get Enrolled</span></a></li>
+										<li class="menu-item"><a href="eligibility.php"><span>Eligibility</span></a></li>
 									</ul>
 								</li>
-
-								<li class="menu-item "><a href="contacts.html"><span>Contacts</span></a></li>
+								
+								<li class="menu-item "><a href="contacts.php"><span>Contacts</span></a></li>
 							</ul>
 						</nav>
 					</div>
@@ -145,21 +211,21 @@
 						<div class="post_item_excerpt odd post-77 post format-standard has-post-thumbnail hentry category-faq tag-business tag-installation tag-services">
 							<div class="post_featured">
 								<div class="post_thumb" data-image="images/image-8.jpg" data-title="Costs Related to Service Callouts and Repairs During the Contract">
-									<a class="hover_icon hover_icon_link" href="post.html"><img width="770" height="434" alt="Costs Related to Service Callouts and Repairs During the Contract" src="images/image-8-770x434.jpg"></a>
+									<a class="hover_icon hover_icon_link" href="post.php"><img width="770" height="434" alt="Costs Related to Service Callouts and Repairs During the Contract" src="images/image-8-770x434.jpg"></a>
 								</div>
 							</div>
 
 							<div class="post_content clearfix">
-								<h3 class="post_title"><a href="post.html">Costs Related to Service Callouts and Repairs During the Contract</a></h3>
+								<h3 class="post_title"><a href="post.php">Costs Related to Service Callouts and Repairs During the Contract</a></h3>
 								<div class="post_info">
-									<span class="post_info_item post_info_posted icon-clock-empty"> <a href="post.html" class="post_info_date">September 7, 2016</a></span>
-									<span class="post_info_item post_info_counters">	<a class="post_counters_item post_counters_views icon-eye" title="Views - 97" href="post.html"><span class="post_counters_number">97</span></a>
+									<span class="post_info_item post_info_posted icon-clock-empty"> <a href="post.php" class="post_info_date">September 7, 2016</a></span>
+									<span class="post_info_item post_info_counters">	<a class="post_counters_item post_counters_views icon-eye" title="Views - 97" href="post.php"><span class="post_counters_number">97</span></a>
 									</span>
 								</div>
 								<div class="post_descr">
 									<p>Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt, explicabo. Nemo enim ipsam voluptatem...</p>
 									<a
-													href="post.html" class="sc_button sc_button_square sc_button_style_filled sc_button_size_small sc_button_style_color_style2">Read more</a>
+													href="post.php" class="sc_button sc_button_square sc_button_style_filled sc_button_size_small sc_button_style_color_style2">Read more</a>
 								</div>
 
 							</div>
@@ -171,20 +237,20 @@
 						<div class="post_item_excerpt even post-76 post format-standard has-post-thumbnail hentry category-components tag-air-conditioning tag-installation">
 							<div class="post_featured">
 								<div class="post_thumb" data-image="images/image-7.jpg" data-title="Cleaning Materials and Lubricants Required for Maintenance Cisits">
-									<a class="hover_icon hover_icon_link" href="post.html"><img width="770" height="434" alt="Cleaning Materials and Lubricants Required for Maintenance Cisits" src="images/image-7-770x434.jpg"></a>
+									<a class="hover_icon hover_icon_link" href="post.php"><img width="770" height="434" alt="Cleaning Materials and Lubricants Required for Maintenance Cisits" src="images/image-7-770x434.jpg"></a>
 								</div>
 							</div>
 
 							<div class="post_content clearfix">
-								<h3 class="post_title"><a href="post.html">Cleaning Materials and Lubricants Required for Maintenance Cisits</a></h3>
+								<h3 class="post_title"><a href="post.php">Cleaning Materials and Lubricants Required for Maintenance Cisits</a></h3>
 								<div class="post_info">
-									<span class="post_info_item post_info_posted icon-clock-empty"> <a href="post.html" class="post_info_date">September 7, 2016</a></span>
-									<span class="post_info_item post_info_counters">	<a class="post_counters_item post_counters_views icon-eye" title="Views - 57" href="post.html"><span class="post_counters_number">57</span></a>
+									<span class="post_info_item post_info_posted icon-clock-empty"> <a href="post.php" class="post_info_date">September 7, 2016</a></span>
+									<span class="post_info_item post_info_counters">	<a class="post_counters_item post_counters_views icon-eye" title="Views - 57" href="post.php"><span class="post_counters_number">57</span></a>
 									</span>
 								</div>
 								<div class="post_descr">
 									<p>Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt, explicabo. Nemo enim ipsam voluptatem...</p>
-									<a href="post.html" class="sc_button sc_button_square sc_button_style_filled sc_button_size_small sc_button_style_color_style2">Read more</a>
+									<a href="post.php" class="sc_button sc_button_square sc_button_style_filled sc_button_size_small sc_button_style_color_style2">Read more</a>
 								</div>
 
 							</div>
@@ -201,16 +267,16 @@
 							</div>
 
 							<div class="post_content clearfix">
-								<h3 class="post_title"><a href="post.html">Total Air Conditioning Service Support Whenever You Need It</a></h3>
+								<h3 class="post_title"><a href="post.php">Total Air Conditioning Service Support Whenever You Need It</a></h3>
 								<div class="post_info">
-									<span class="post_info_item post_info_posted icon-clock-empty"> <a href="post.html" class="post_info_date">September 7, 2016</a></span>
-									<span class="post_info_item post_info_counters">	<a class="post_counters_item post_counters_views icon-eye" title="Views - 49" href="post.html"><span class="post_counters_number">49</span></a>
+									<span class="post_info_item post_info_posted icon-clock-empty"> <a href="post.php" class="post_info_date">September 7, 2016</a></span>
+									<span class="post_info_item post_info_counters">	<a class="post_counters_item post_counters_views icon-eye" title="Views - 49" href="post.php"><span class="post_counters_number">49</span></a>
 									</span>
 								</div>
 								<div class="post_descr">
 									<p>Quis autem vel eum iure reprehenderit, qui in ea voluptate velit esse, quam nihil molestiae consequatur, vel illum, qui dolorem eum fugiat, quo voluptas nulla pariatur? At vero eos et accusamus et iusto odio dignissimos ducimus, qui blanditiis...</p>
 									<a
-													href="post.html" class="sc_button sc_button_square sc_button_style_filled sc_button_size_small sc_button_style_color_style2">Read more</a>
+													href="post.php" class="sc_button sc_button_square sc_button_style_filled sc_button_size_small sc_button_style_color_style2">Read more</a>
 								</div>
 
 							</div>
@@ -222,16 +288,16 @@
 						<div class="post_item_excerpt even post-74 post format-standard hentry category-maintenance tag-installation tag-repair tag-services">
 
 							<div class="post_content clearfix">
-								<h3 class="post_title"><a href="post.html">Deciding To Replace Your Equipment</a></h3>
+								<h3 class="post_title"><a href="post.php">Deciding To Replace Your Equipment</a></h3>
 								<div class="post_info">
-									<span class="post_info_item post_info_posted icon-clock-empty"> <a href="post.html" class="post_info_date">September 7, 2016</a></span>
-									<span class="post_info_item post_info_counters">	<a class="post_counters_item post_counters_views icon-eye" title="Views - 33" href="post.html"><span class="post_counters_number">33</span></a>
+									<span class="post_info_item post_info_posted icon-clock-empty"> <a href="post.php" class="post_info_date">September 7, 2016</a></span>
+									<span class="post_info_item post_info_counters">	<a class="post_counters_item post_counters_views icon-eye" title="Views - 33" href="post.php"><span class="post_counters_number">33</span></a>
 									</span>
 								</div>
 								<div class="post_descr">
 									<p>Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt, explicabo. Nemo enim ipsam voluptatem...</p>
 									<a
-													href="post.html" class="sc_button sc_button_square sc_button_style_filled sc_button_size_small sc_button_style_color_style2">Read more</a>
+													href="post.php" class="sc_button sc_button_square sc_button_style_filled sc_button_size_small sc_button_style_color_style2">Read more</a>
 								</div>
 
 							</div>
@@ -243,10 +309,10 @@
 						<div class="post_item_excerpt post_format_quote odd post-73 post format-quote hentry category-faq tag-air-conditioning tag-installation post_format-post-format-quote">
 
 							<div class="post_content clearfix">
-								<h3 class="post_title"><a href="post.html">Quote Post</a></h3>
+								<h3 class="post_title"><a href="post.php">Quote Post</a></h3>
 								<div class="post_info">
-									<span class="post_info_item post_info_posted icon-clock-empty"> <a href="post.html" class="post_info_date">September 7, 2016</a></span>
-									<span class="post_info_item post_info_counters">	<a class="post_counters_item post_counters_views icon-eye" title="Views - 28" href="post.html"><span class="post_counters_number">28</span></a>
+									<span class="post_info_item post_info_posted icon-clock-empty"> <a href="post.php" class="post_info_date">September 7, 2016</a></span>
+									<span class="post_info_item post_info_counters">	<a class="post_counters_item post_counters_views icon-eye" title="Views - 28" href="post.php"><span class="post_counters_number">28</span></a>
 									</span>
 								</div>
 								<div class="post_descr">
@@ -268,19 +334,19 @@
 								<div id="sc_slider_182488367" class="sc_slider sc_slider_swiper swiper-slider-container sc_slider_controls sc_slider_pagination" data-old-width="770" data-old-height="434" data-interval="6445">
 									<div class="slides swiper-wrapper">
 										<div class="swiper-slide">
-											<a href="post.html"></a>
+											<a href="post.php"></a>
 										</div>
 										<div class="swiper-slide">
-											<a href="post.html"></a>
+											<a href="post.php"></a>
 										</div>
 										<div class="swiper-slide">
-											<a href="post.html"></a>
+											<a href="post.php"></a>
 										</div>
 										<div class="swiper-slide">
-											<a href="post.html"></a>
+											<a href="post.php"></a>
 										</div>
 										<div class="swiper-slide">
-											<a href="post.html"></a>
+											<a href="post.php"></a>
 										</div>
 									</div>
 									<div class="sc_slider_controls_wrap">
@@ -292,16 +358,16 @@
 							</div>
 
 							<div class="post_content clearfix">
-								<h3 class="post_title"><a href="post.html">Electric or Gas Water Heater Repair and Replacement</a></h3>
+								<h3 class="post_title"><a href="post.php">Electric or Gas Water Heater Repair and Replacement</a></h3>
 								<div class="post_info">
-									<span class="post_info_item post_info_posted icon-clock-empty"> <a href="post.html" class="post_info_date">September 7, 2016</a></span>
-									<span class="post_info_item post_info_counters">	<a class="post_counters_item post_counters_views icon-eye" title="Views - 40" href="post.html"><span class="post_counters_number">40</span></a>
+									<span class="post_info_item post_info_posted icon-clock-empty"> <a href="post.php" class="post_info_date">September 7, 2016</a></span>
+									<span class="post_info_item post_info_counters">	<a class="post_counters_item post_counters_views icon-eye" title="Views - 40" href="post.php"><span class="post_counters_number">40</span></a>
 									</span>
 								</div>
 								<div class="post_descr">
 									<p>Duis auctor arcu ac mi bibendum posuere. Integer diam orci, faucibus ut mi sed, tincidunt vehicula erat. Sed ultricies tempor nunc, nec malesuada tortor vehicula ac. Curabitur imperdiet massa ac ex pretium, et mollis metus aliquet. Phasellus...</p>
 									<a
-													href="post.html" class="sc_button sc_button_square sc_button_style_filled sc_button_size_small sc_button_style_color_style2">Read more</a>
+													href="post.php" class="sc_button sc_button_square sc_button_style_filled sc_button_size_small sc_button_style_color_style2">Read more</a>
 								</div>
 
 							</div>
@@ -313,21 +379,21 @@
 						<div class="post_item_excerpt odd post-71 post format-standard has-post-thumbnail hentry category-components category-faq tag-installation tag-repair tag-services">
 							<div class="post_featured">
 								<div class="post_thumb" data-image="images/image-4.jpg" data-title="Heating Precision System Tune-Ups and Maintenance">
-									<a class="hover_icon hover_icon_link" href="post.html"><img width="770" height="434" alt="Heating Precision System Tune-Ups and Maintenance" src="images/image-4-770x434.jpg"></a>
+									<a class="hover_icon hover_icon_link" href="post.php"><img width="770" height="434" alt="Heating Precision System Tune-Ups and Maintenance" src="images/image-4-770x434.jpg"></a>
 								</div>
 							</div>
 
 							<div class="post_content clearfix">
-								<h3 class="post_title"><a href="post.html">Heating Precision System Tune-Ups and Maintenance</a></h3>
+								<h3 class="post_title"><a href="post.php">Heating Precision System Tune-Ups and Maintenance</a></h3>
 								<div class="post_info">
-									<span class="post_info_item post_info_posted icon-clock-empty"> <a href="post.html" class="post_info_date">September 7, 2016</a></span>
-									<span class="post_info_item post_info_counters">	<a class="post_counters_item post_counters_views icon-eye" title="Views - 36" href="post.html"><span class="post_counters_number">36</span></a>
+									<span class="post_info_item post_info_posted icon-clock-empty"> <a href="post.php" class="post_info_date">September 7, 2016</a></span>
+									<span class="post_info_item post_info_counters">	<a class="post_counters_item post_counters_views icon-eye" title="Views - 36" href="post.php"><span class="post_counters_number">36</span></a>
 									</span>
 								</div>
 								<div class="post_descr">
 									<p>Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt, explicabo. Nemo enim ipsam voluptatem...</p>
 									<a
-													href="post.html" class="sc_button sc_button_square sc_button_style_filled sc_button_size_small sc_button_style_color_style2">Read more</a>
+													href="post.php" class="sc_button sc_button_square sc_button_style_filled sc_button_size_small sc_button_style_color_style2">Read more</a>
 								</div>
 
 							</div>
@@ -339,21 +405,21 @@
 						<div class="post_item_excerpt even post-70 post format-standard has-post-thumbnail hentry category-ac-repair tag-air-conditioning tag-maintenance tag-services">
 							<div class="post_featured">
 								<div class="post_thumb" data-image="images/image-3.jpg" data-title="Will your AC make it through Summer?">
-									<a class="hover_icon hover_icon_link" href="post.html"><img width="770" height="434" alt="Will your AC make it through Summer?" src="images/image-3-770x434.jpg"></a>
+									<a class="hover_icon hover_icon_link" href="post.php"><img width="770" height="434" alt="Will your AC make it through Summer?" src="images/image-3-770x434.jpg"></a>
 								</div>
 							</div>
 
 							<div class="post_content clearfix">
-								<h3 class="post_title"><a href="post.html">Will your AC make it through Summer?</a></h3>
+								<h3 class="post_title"><a href="post.php">Will your AC make it through Summer?</a></h3>
 								<div class="post_info">
-									<span class="post_info_item post_info_posted icon-clock-empty"> <a href="post.html" class="post_info_date">September 7, 2016</a></span>
-									<span class="post_info_item post_info_counters">	<a class="post_counters_item post_counters_views icon-eye" title="Views - 100" href="post.html"><span class="post_counters_number">100</span></a>
+									<span class="post_info_item post_info_posted icon-clock-empty"> <a href="post.php" class="post_info_date">September 7, 2016</a></span>
+									<span class="post_info_item post_info_counters">	<a class="post_counters_item post_counters_views icon-eye" title="Views - 100" href="post.php"><span class="post_counters_number">100</span></a>
 									</span>
 								</div>
 								<div class="post_descr">
 									<p>Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt, explicabo. Nemo enim ipsam voluptatem...</p>
 									<a
-													href="post.html" class="sc_button sc_button_square sc_button_style_filled sc_button_size_small sc_button_style_color_style2">Read more</a>
+													href="post.php" class="sc_button sc_button_square sc_button_style_filled sc_button_size_small sc_button_style_color_style2">Read more</a>
 								</div>
 
 							</div>
@@ -365,21 +431,21 @@
 						<div class="post_item_excerpt odd post-69 post format-standard has-post-thumbnail hentry category-maintenance tag-installation tag-repair tag-services">
 							<div class="post_featured">
 								<div class="post_thumb" data-image="images/image-2.jpg" data-title="How to Identify and Prevent Heat Exhaustion">
-									<a class="hover_icon hover_icon_link" href="post.html"><img width="770" height="434" alt="How to Identify and Prevent Heat Exhaustion" src="images/image-2-770x434.jpg"></a>
+									<a class="hover_icon hover_icon_link" href="post.php"><img width="770" height="434" alt="How to Identify and Prevent Heat Exhaustion" src="images/image-2-770x434.jpg"></a>
 								</div>
 							</div>
 
 							<div class="post_content clearfix">
-								<h3 class="post_title"><a href="post.html">How to Identify and Prevent Heat Exhaustion</a></h3>
+								<h3 class="post_title"><a href="post.php">How to Identify and Prevent Heat Exhaustion</a></h3>
 								<div class="post_info">
-									<span class="post_info_item post_info_posted icon-clock-empty"> <a href="post.html" class="post_info_date">September 7, 2016</a></span>
-									<span class="post_info_item post_info_counters">	<a class="post_counters_item post_counters_views icon-eye" title="Views - 53" href="post.html"><span class="post_counters_number">53</span></a>
+									<span class="post_info_item post_info_posted icon-clock-empty"> <a href="post.php" class="post_info_date">September 7, 2016</a></span>
+									<span class="post_info_item post_info_counters">	<a class="post_counters_item post_counters_views icon-eye" title="Views - 53" href="post.php"><span class="post_counters_number">53</span></a>
 									</span>
 								</div>
 								<div class="post_descr">
 									<p>Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt, explicabo. Nemo enim ipsam voluptatem...</p>
 									<a
-													href="post.html" class="sc_button sc_button_square sc_button_style_filled sc_button_size_small sc_button_style_color_style2">Read more</a>
+													href="post.php" class="sc_button sc_button_square sc_button_style_filled sc_button_size_small sc_button_style_color_style2">Read more</a>
 								</div>
 
 							</div>
@@ -391,21 +457,21 @@
 						<div class="post_item_excerpt even post-68 post format-standard has-post-thumbnail hentry category-faq category-installation tag-installation tag-repair tag-services">
 							<div class="post_featured">
 								<div class="post_thumb" data-image="images/image-1.jpg" data-title="Air Conditioning Installation And  Cleaning Guide">
-									<a class="hover_icon hover_icon_link" href="post.html"><img width="770" height="434" alt="Air Conditioning Installation And  Cleaning Guide" src="images/image-1-770x434.jpg"></a>
+									<a class="hover_icon hover_icon_link" href="post.php"><img width="770" height="434" alt="Air Conditioning Installation And  Cleaning Guide" src="images/image-1-770x434.jpg"></a>
 								</div>
 							</div>
 
 							<div class="post_content clearfix">
-								<h3 class="post_title"><a href="post.html">Air Conditioning Installation And  Cleaning Guide</a></h3>
+								<h3 class="post_title"><a href="post.php">Air Conditioning Installation And  Cleaning Guide</a></h3>
 								<div class="post_info">
-									<span class="post_info_item post_info_posted icon-clock-empty"> <a href="post.html" class="post_info_date">September 7, 2016</a></span>
-									<span class="post_info_item post_info_counters">	<a class="post_counters_item post_counters_views icon-eye" title="Views - 64" href="post.html"><span class="post_counters_number">64</span></a>
+									<span class="post_info_item post_info_posted icon-clock-empty"> <a href="post.php" class="post_info_date">September 7, 2016</a></span>
+									<span class="post_info_item post_info_counters">	<a class="post_counters_item post_counters_views icon-eye" title="Views - 64" href="post.php"><span class="post_counters_number">64</span></a>
 									</span>
 								</div>
 								<div class="post_descr">
 									<p>Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt, explicabo. Nemo enim ipsam voluptatem...</p>
 									<a
-													href="post.html" class="sc_button sc_button_square sc_button_style_filled sc_button_size_small sc_button_style_color_style2">Read more</a>
+													href="post.php" class="sc_button sc_button_square sc_button_style_filled sc_button_size_small sc_button_style_color_style2">Read more</a>
 								</div>
 
 							</div>
@@ -425,16 +491,16 @@
 							</div>
 
 							<div class="post_content clearfix">
-								<h3 class="post_title"><a href="post.html">Audio Post</a></h3>
+								<h3 class="post_title"><a href="post.php">Audio Post</a></h3>
 								<div class="post_info">
-									<span class="post_info_item post_info_posted icon-clock-empty"> <a href="post.html" class="post_info_date">September 7, 2016</a></span>
-									<span class="post_info_item post_info_counters">	<a class="post_counters_item post_counters_views icon-eye" title="Views - 29" href="post.html"><span class="post_counters_number">29</span></a>
+									<span class="post_info_item post_info_posted icon-clock-empty"> <a href="post.php" class="post_info_date">September 7, 2016</a></span>
+									<span class="post_info_item post_info_counters">	<a class="post_counters_item post_counters_views icon-eye" title="Views - 29" href="post.php"><span class="post_counters_number">29</span></a>
 									</span>
 								</div>
 								<div class="post_descr">
 									<p>Quis autem vel eum iure reprehenderit, qui in ea voluptate velit esse, quam nihil molestiae consequatur, vel illum, qui dolorem eum fugiat, quo voluptas nulla pariatur? At vero eos et accusamus et iusto odio dignissimos ducimus, qui blanditiis...</p>
 									<a
-													href="post.html" class="sc_button sc_button_square sc_button_style_filled sc_button_size_small sc_button_style_color_style2">Read more</a>
+													href="post.php" class="sc_button sc_button_square sc_button_style_filled sc_button_size_small sc_button_style_color_style2">Read more</a>
 								</div>
 
 							</div>
@@ -454,15 +520,15 @@
 							<aside id="categories-2" class="widget_number_1 widget widget_categories">
 								<h5 class="widget_title">Categories</h5>
 								<ul>
-									<li class="cat-item"><a href="all-posts.html">AC Repair</a>
+									<li class="cat-item"><a href="all-posts.php">AC Repair</a>
 									</li>
-									<li class="cat-item"><a href="all-posts.html">Components</a>
+									<li class="cat-item"><a href="all-posts.php">Components</a>
 									</li>
-									<li class="cat-item"><a href="all-posts.html">FAQ</a>
+									<li class="cat-item"><a href="all-posts.php">FAQ</a>
 									</li>
-									<li class="cat-item"><a href="all-posts.html">Installation</a>
+									<li class="cat-item"><a href="all-posts.php">Installation</a>
 									</li>
-									<li class="cat-item"><a href="all-posts.html">Maintenance</a>
+									<li class="cat-item"><a href="all-posts.php">Maintenance</a>
 									</li>
 								</ul>
 							</aside>
@@ -473,8 +539,8 @@
 							<aside id="recent-comments-2" class="widget_number_3 widget widget_recent_comments">
 								<h5 class="widget_title">Comments</h5>
 								<ul id="recentcomments">
-									<li class="recentcomments"><span class="comment-author-link">Martha Stewart</span> on <a href="post.html">Will your AC make it through Summer?</a></li>
-									<li class="recentcomments"><span class="comment-author-link">Mike Newton</span> on <a href="post.html">How to Identify and Prevent Heat Exhaustion</a></li>
+									<li class="recentcomments"><span class="comment-author-link">Martha Stewart</span> on <a href="post.php">Will your AC make it through Summer?</a></li>
+									<li class="recentcomments"><span class="comment-author-link">Mike Newton</span> on <a href="post.php">How to Identify and Prevent Heat Exhaustion</a></li>
 								</ul>
 							</aside>
 							<aside id="calendar-2" class="widget_number_4 widget widget_calendar">
@@ -551,10 +617,10 @@
 								<h5 class="widget_title">Recent Posts</h5>
 								<ul>
 									<li>
-										<a href="post.html">Costs Related to Service Callouts and Repairs During the Contract</a>
+										<a href="post.php">Costs Related to Service Callouts and Repairs During the Contract</a>
 									</li>
 									<li>
-										<a href="post.html">Cleaning Materials and Lubricants Required for Maintenance Cisits</a>
+										<a href="post.php">Cleaning Materials and Lubricants Required for Maintenance Cisits</a>
 									</li>
 								</ul>
 							</aside>
@@ -586,4 +652,33 @@
 			<!-- </.page_content_wrap> -->
 <!-- </.page_content_wrap> -->
 
-<?php include 'include/footer.php'; ?>
+			<!-- /.footer_wrap -->
+			<!-- /.footer_wrap -->
+			<div class="copyright_wrap copyright_style_text  scheme_dark">
+				<div class="copyright_wrap_inner">
+					<div class="content_wrap">
+						<div class="copyright_text">
+							<p><a href="#">NIGERIA SOCIA SECURITY</a> © 2016 All Rights Reserved</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- /.page_wrap -->
+		<!-- /.page_wrap -->
+	</div>
+	<!-- /.body_wrap -->
+	<a href="#" class="scroll_to_top icon-up" title="Scroll to top"></a>
+	<div class="custom_html_section"></div>
+	<script type='text/javascript' src='js/vendor/jquery.js'></script>
+	<script type='text/javascript' src='js/vendor/jquery-migrate.min.js'></script>
+	<script type='text/javascript' src='js/vendor/fontawesome.js'></script>
+	<script type='text/javascript' src='js/vendor/fw/js/superfish.js'></script>
+	<script type='text/javascript' src='js/vendor/fw/js/core.utils.js'></script>
+	<script type='text/javascript' src='js/vendor/fw/js/core.init.js'></script>
+	<script type='text/javascript' src='js/vendor/mediaelement/mediaelement-and-player.min.js'></script>
+	<script type='text/javascript' src='js/vendor/shortcodes/theme.shortcodes.js'></script>
+	<script type='text/javascript' src='js/vendor/fw/js/swiper/swiper.js'></script>
+	<script type='text/javascript' src='js/custom/global.js'></script>
+</body>
+</html>
