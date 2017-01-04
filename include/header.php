@@ -1,6 +1,4 @@
-<?php include 'dbconfig/dbInit.php';
-session_start();
-?>
+<?php session_start(); include 'dbconfig/dbInit.php';?>
 <!DOCTYPE html>
 <html lang="en-US" class="scheme_original">
 <head>

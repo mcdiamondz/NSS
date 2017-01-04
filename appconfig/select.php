@@ -85,8 +85,7 @@
 
 
 
-//echo hash('sha512', $password);
-//echo ($email);
+
                                     $sql = "SELECT * FROM login
                                             WHERE Email = :email AND Password = :passwd";
                                     $values = array(':email' => $email, ':passwd' => hash('sha512', $password));
@@ -99,12 +98,13 @@
                                       }
 
                                         if($IsActive == 0){
-                                          echo  "<span>
-                                                    <div class='alert alert-danger fade in'>
-                                                        Account has not been activated, please activate your account
-                                                    </div>
-                                                </span>";
-                                        }else{
+                                              echo  "<span>
+                                                        <div class='alert alert-danger fade in'>
+                                                            Account has not been activated, please activate your account
+                                                        </div>
+                                                    </span>";
+                                        }
+                                        elseif($IsActive == 1){
 
                                           //records user's last login date
                                           $sql = "UPDATE login SET LastLogin = :logindate WHERE Email = :email";
@@ -146,7 +146,7 @@
                                               // header('Location: contacts.php');
                                           }
 
-                                            }
+                                      }
 
 
 

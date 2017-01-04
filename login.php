@@ -1,4 +1,7 @@
-<?php include 'include/header.php'; ?>
+<?php
+include 'include/header.php';
+?>
+
 			<div class="header_mobile">
 				<div class="content_wrap">
 					<div class="menu_button icon-menu"></div>
