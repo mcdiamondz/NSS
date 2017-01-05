@@ -92,7 +92,7 @@
                                                                   ':password' => hash('sha512', $password),
                                                                   ':isactive' => $isactive,
                                                                   ':hash' => $hash,
-                                                                  ':access' => $accesslevel
+                                                                  ':access' => $accesslevel,
                                                                   ':submitted' => $datasub);
 
                                                   $data = $nss->insert_query($sql, $values);

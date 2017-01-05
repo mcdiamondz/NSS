@@ -81,78 +81,78 @@
                             $password = empty($_POST['password'])?'':test_input($_POST['password']);
                             $date = date('Y-m-d');
 
-
-
-
-
-
                                     $sql = "SELECT * FROM login
                                             WHERE Email = :email AND Password = :passwd";
                                     $values = array(':email' => $email, ':passwd' => hash('sha512', $password));
                                     $data = $nss->select_query($sql, $values);
                                     if($data){
 
-                                      foreach ($data as $value) {
-                                        # code...
-                                        $IsActive = $value['IsActive'];
-                                        $datasubmitted = $value['DataSubmitted'];
-                                      }
-
-                                        if($IsActive == 0){
-                                              echo  "<span>
-                                                        <div class='alert alert-danger fade in'>
-                                                            Account has not been activated, please activate your account
-                                                        </div>
-                                                    </span>";
-                                        }
-                                        elseif($IsActive == 1){
-
-                                          //records user's last login date
-                                          $sql = "UPDATE login SET LastLogin = :logindate WHERE Email = :email";
-                                          $values = array(':logindate' => $date, ':email' => $email);
-                                          $nss->update_query($sql, $values);
-
-
-
                                           foreach ($data as $value) {
-                                              $accesslevel = $value['AccessLevel'];
-                                              $_SESSION['user_email'] = $value['Email'];
-                                              $name = $value['']
-                                              if($value['AccessLevel'] == 1){
-                                                  $_SESSION['userid'] = $value['UserID'];
-                                              }
-                                              elseif($value['AccessLevel'] == 2){
-                                                  $_SESSION['corpid'] = $value['UserID'];
-                                              }
+                                            # code...
+                                            $IsActive = $value['IsActive'];
+                                            $datasubmitted = $value['DataSubmitted'];
                                           }
 
+                                            if($IsActive == 0){
+                                                  echo  "<span>
+                                                            <div class='alert alert-danger fade in'>
+                                                                Account has not been activated, please activate your account
+                                                            </div>
+                                                        </span>";
+                                            }
+                                            elseif($IsActive == 1){
+
+                                                    //records user's last login date
+                                                    $sql = "UPDATE login SET LastLogin = :logindate WHERE Email = :email";
+                                                    $values = array(':logindate' => $date, ':email' => $email);
+                                                    $nss->update_query($sql, $values);
 
 
-                                          // if ($accesslevel == 0) {
-                                          //     $_SESSION['access'] = 0; //Users
-                                          // }elseif($accesslevel == 1) {
-                                          //     $_SESSION['access'] = 1; //Collation agents
-                                          // }elseif($accesslevel == 2) {
-                                          //     $_SESSION['access'] = 2; //admin
-                                          // }
+
+                                                    foreach ($data as $value) {
+                                                        $accesslevel = $value['AccessLevel'];
+                                                        $_SESSION['user_email'] = $value['Email'];
+                                                        // $name = $value[''];
+                                                        if($value['AccessLevel'] == 1){
+                                                            $_SESSION['userid'] = $value['UserID'];
+                                                        }
+                                                        elseif($value['AccessLevel'] == 2){
+                                                            $_SESSION['corpid'] = $value['UserID'];
+                                                        }
+                                                    }
+
+
+
+                                                    // if ($accesslevel == 0) {
+                                                    //     $_SESSION['access'] = 0; //Users
+                                                    // }elseif($accesslevel == 1) {
+                                                    //     $_SESSION['access'] = 1; //Collation agents
+                                                    // }elseif($accesslevel == 2) {
+                                                    //     $_SESSION['access'] = 2; //admin
+                                                    // }
 
 
 
 
-                                          if($accesslevel == 1){
-                                            if()
-                                              $_SESSION['access_level'] = $accesslevel;
-                                              header('Location: dashboard/personal/add.php');
+                                                    if($accesslevel == 1){
+                                                        if($datasubmitted == 0){
+                                                          $_SESSION['access_level'] = $accesslevel;
+                                                          header('Location: dashboard/personal/add.php');
+                                                        }
+                                                        else{
+                                                          header('Location: dashboard/personal/index.php');
+                                                        }
+                                                    }
+                                                    elseif($accesslevel == 2){
+                                                        if($datasubmitted == 0){
+                                                          $_SESSION['access_level'] = $accesslevel;
+                                                            header('Location: dashboard/corporate/add.php');
+                                                        }
+                                                        else{
+                                                            header('Location: dashboard/corporate/index.php');
+                                                        }
+                                                    }
                                           }
-                                          elseif($accesslevel == 2){
-                                              header('Location: dashboard/corporate/add.php');
-                                              // header('Location: contacts.php');
-                                          }
-
-                                      }
-
-
-
                                   }
                                   else{
                                               //Display login fail error
