@@ -62,7 +62,7 @@ function stateoforigin() {
       var stateid = document.getElementById('state_of_origin').value;
       var postData = {stateid : stateid};
       $.ajax({
-            url: '../include/displaylga.php',
+            url: '../../include/displaylga.php',
             type: 'POST',
             data: postData,
             success: function (data, status, xhr) {

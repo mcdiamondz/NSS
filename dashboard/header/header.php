@@ -224,49 +224,6 @@
                 </div>
             </div>
 
-            <div class="navbar-custom">
-                <div class="container">
-                    <div id="navigation">
-                        <!-- Navigation Menu-->
-                        <ul class="navigation-menu">
-                            <li class="has-submenu">
-                                <a href="index.php"><i class="md md-dashboard"></i>Dashboard</a>
-
-                            </li>
-
-                            <li class="has-submenu">
-                                <a href="add.php"><i class="md md-account-circle"></i>Add Data</a>
-
-                            </li>
-
-
-
-
-                            <li class="has-submenu">
-                                <a href="#"><i class="md md-folder-special"></i>Extras</a>
-                                <!--
-                                <ul class="submenu megamenu">
-
-                                    <li>
-                                        <ul>
-                                            <li><a href="extra-faq.html">FAQ</a></li>
-                                            <li><a href="extra-search-result.html">Search result</a></li>
-                                            <li><a href="extra-gallery.html">Gallery</a></li>
-                                            <li><a href="extra-pricing.html">Pricing</a></li>
-                                            <li><a href="apps-calendar.html"> Calendar</a></li>
-                                            <li><a href="apps-contact.html"> Contact</a></li>
-                                            <li><a href="apps-taskboard.html"> Taskboard</a></li>
-                                        </ul>
-                                    </li>
-
-
-                                </ul>-->
-                            </li>
-
-                        </ul>
-                        <!-- End navigation menu        -->
-                    </div>
-                </div> <!-- end container -->
-            </div> <!-- end navbar-custom -->
+            
         </header>
         <!-- End Navigation Bar-->

@@ -63,7 +63,7 @@
                   LGA_of_residence : $('#LGA_of_residence').val()
                 };
                 $.ajax({
-                  url: '../include/savedetails.php',
+                  url: '../../include/savedetails.php',
                   type: 'POST',
                   data: postData,
                   success: function (data, status, xhr) {

@@ -1,4 +1,4 @@
-<?php include "header.php";
+<?php include "../header/header.php";
 
 $sql = "SELECT * FROM states ORDER BY name ASC";
 $stdata = $nss->select($sql);

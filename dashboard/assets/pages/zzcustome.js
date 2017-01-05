@@ -43,9 +43,11 @@
             },
             onFinished: function (event, currentIndex) {
               var state_of_location = document.getElementsByName('state_of_location')[0].value;
+              var logo = document.getElementsByName('logo').files[0];
               var postData = {
                   cid : $('#cid').val(),
-                  logo : $('#logo').val(),
+                  //logo : $('#logo').val(),
+                  logo : logo,
                   company_name : $('#company_name').val(),
                   business_type :  $('#business_type').val(),
                   company_address :  $('#company_address').val(),
@@ -61,7 +63,7 @@
                   company_contact_email : $('#company_contact_email').val()
                 };
                 $.ajax({
-                  url: '../include/savecorporate.php',
+                  url: '../../include/savecorporate.php',
                   type: 'POST',
                   data: postData,
                   success: function (data, status, xhr) {

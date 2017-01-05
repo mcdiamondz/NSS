@@ -1,6 +1,7 @@
 <?php
 include 'header.php';
 include '../../include/selectcorporate.php';
+include '../../include/selectcorproject.php';
 ?>
 
 
@@ -26,125 +27,161 @@ include '../../include/selectcorporate.php';
                             </div>
 
 
-                        </div>
-
-                        <div class="row">
-                    <div class="col-lg-4">
-                        <div class="panel panel-border panel-inverse">
-                            <div class="panel-heading">
-                                <h3 class="panel-title">Company Profile</h3>
-                            </div>
-                            <div class="panel-body">
-                              <table>
-                                <tbody>
-                                  <tr>
-                                    <td><b>First Name:</strong></b></td>
-                                    <td> <?php echo $firstname; ?></td>
-                                  </tr>
-                                  <tr>
-                                    <td><b>Middle Name:</b></td>
-                                    <td> <?php echo $middlename; ?></td>
-                                  </tr>
-                                  <tr>
-                                    <td><b>Last Name:</b></td>
-                                    <td> <?php echo $lastname; ?></td>
-                                  </tr>
-                                  <tr>
-                                    <td><b>Gender:</b></td>
-                                    <td> <?php echo $gender; ?></td>
-                                  </tr>
-                                  <tr>
-                                    <td><b>Date Of Birth:</b></td>
-                                    <td> <?php echo $dob; ?></td>
-                                  </tr>
-                                  <tr>
-                                    <td><b>Email:</b></td>
-                                    <td> <?php echo $email; ?></td>
-                                  </tr>
-                                  <tr>
-                                    <td><b>Phone:</b></td>
-                                    <td> <?php echo $phone; ?></td>
-                                  </tr>
-                                </tbody>
-                              </table>
-                            </div>
-                        </div>
-                    </div>
 
 
-                    <div class="col-lg-4">
-                        <div class="panel panel-border panel-purple">
-                            <div class="panel-heading">
-                                <h3 class="panel-title">Registration Details</h3>
-                            </div>
-                            <div class="panel-body">
-                                <p>
-                                    Registration Details Here
-                                </p>
-                            </div>
                         </div>
-                    </div>
-                    <div class="row">
-                      <div class="col-lg-4">
-                     <div class="panel panel-color panel-primary">
-                         <!-- Default panel contents -->
-                         <div class="panel-heading">
-                             <h3 class="panel-title">Projects </h3>
-                         </div>
-                         <div class="panel-body">
-                             <p>
-                                 List of projects executed, duration, remarks etc.
-                             </p>
-                         </div>
+                        <div class="col-lg-4">
+                          <div class="panel panel-border panel-inverse">
+                              <div class="panel-heading">
+                                  <h3 class="panel-title">Company Profile</h3>
+                              </div>
+                              <div class="panel-body">
+                                <table>
+                                  <tbody>
+                                    <tr>
+                                      <td><b>Company Name:</strong></b></td>
+                                      <td> <?php echo isset($orgname)?$orgname:''; ?></td>
+                                    </tr>
+                                    <tr>
+                                      <td><b>Address:</b></td>
+                                      <td> <?php echo isset($address)?$address:''; ?></td>
+                                    </tr>
 
-                         <!-- Table -->
-                         <table class="table">
-                             <thead>
-                                 <tr>
-                                     <th>#</th>
-                                     <th>Project</th>
-                                     <th>Completion Date</th>
-                                     <th>Location</th>
-                                     <th>Remarks</th>
-                                 </tr>
-                             </thead>
-                             <tbody>
+                                    <tr>
+                                      <td><b>Industry:</b></td>
+                                      <td> <?php echo isset($biztype)?$biztype:''; ?></td>
+                                    </tr>
+                                    <tr>
+                                      <td><b>Email:</b></td>
+                                      <td> <?php echo isset($email)?$email:''; ?></td>
+                                    </tr>
+                                    <tr>
+                                      <td><b>Website:</b></td>
+                                      <td> <?php echo isset($website)?$website:''; ?></td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </div>
+                          </div>
 
-                             </tbody>
-                         </table>
-                     </div>
-                 </div>
-                <div class="col-lg-4">
-                    <div class="panel panel-border panel-success">
-                        <div class="panel-heading">
-                            <h3 class="panel-title">Company Contact Info</h3>
                         </div>
-                        <div class="panel-body">
-                            <p>
-                                Contact Details Here
-                            </p>
+
+                        <div class="col-lg-4">
+                          <div class="panel panel-border panel-purple">
+                              <div class="panel-heading">
+                                  <h3 class="panel-title">Registration Details</h3>
+                              </div>
+                              <div class="panel-body">
+                                  <p>
+                                      <table>
+                                        <tbody>
+                                          <tr>
+                                            <td><b>RC Number:</b></td>
+                                            <td> <?php echo isset($rcnum)?$rcnum:''; ?></td>
+                                          </tr>
+                                          <tr>
+                                            <td><b>TIN Number:</b></td>
+                                            <td> <?php echo isset($tinum)?$tinum:''; ?></td>
+                                          </tr>
+                                          <tr>
+                                            <td><b>Year of Esterblishment:</b></td>
+                                            <td> <?php echo isset($yrofest)?$yrofest:''; ?></td>
+                                          </tr>
+                                        </tbody>
+                                      </table>
+                                  </p>
+                              </div>
+                          </div>
+
                         </div>
-                    </div>
+
+
                 </div>
-                </div>
-
-
-
-
-
-
-
-
-
-
-                      </div>
-
-
-
-
 
                       <!-- Second Data Box-->
 
+                      <div class="row">
+                          <div class="col-lg-2"></div>
+                              <div class="col-lg-10">
+
+                                <div class="col-lg-4">
+                                  <div class="panel panel-border panel-success">
+                                      <div class="panel-heading">
+                                          <h3 class="panel-title">Company Contact Info</h3>
+                                      </div>
+                                      <div class="panel-body">
+                                        <table>
+                                          <tbody>
+                                            <tr>
+                                              <td><b>Contact Person:</b></td>
+                                              <td> <?php echo isset($contname)?$contname:''; ?></td>
+                                            </tr>
+                                            <tr>
+                                              <td><b>Phone Number:</b></td>
+                                              <td> <?php echo isset($contphone)?$contphone:''; ?></td>
+                                            </tr>
+                                            <tr>
+                                              <td><b>Email Address:</b></td>
+                                              <td> <?php echo isset($contemail)?$contemail:''; ?></td>
+                                            </tr>
+                                          </tbody>
+                                        </table>
+                                      </div>
+                                  </div>
+                                </div>
+                                <div class="col-lg-4">
+                                <div class="panel panel-color panel-primary">
+                                 <!-- Default panel contents -->
+                                 <div class="panel-heading">
+                                     <h3 class="panel-title">Projects </h3>
+                                 </div>
+                                 <div class="panel-body">
+                                     <p>
+                                         List of projects executed, duration, remarks etc.
+                                     </p>
+                                 </div>
+
+                                 <!-- Table -->
+                                 <table class="table">
+                                     <thead>
+                                         <tr>
+                                             <th>#</th>
+                                             <th>Project</th>
+                                             <th>Completion Date</th>
+                                             <th>Location</th>
+                                             <th>Remarks</th>
+                                         </tr>
+                                     </thead>
+                                     <tbody>
+                                       <?php
+                                         if($prodata){
+                                           foreach($prodata as $value){
+                                             $projectname = $value['ProjectName'];
+                                             $extdate = $value['ExecutionDate'];
+                                             $remark = $value['Remark'];
+                                               echo "<tr>";
+                                               echo    "<td>$projectname</td>";
+                                               echo    "<td>$extdate</td>";
+                                               echo    "<td>$remark</td>";
+                                               echo "</tr>";
+                                             }
+                                           }
+                                       ?>
+                                     </tbody>
+                                 </table>
+                                </div>
+
+
+                                </div>
+
+
+
+
+
+                              </div>
+
+
+                      </div>
 
 
 
